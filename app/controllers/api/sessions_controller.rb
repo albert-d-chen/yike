@@ -6,6 +6,7 @@ class Api::SessionsController < ApplicationController
             render "/api/users/show"
         else 
             render json: ["Incorrect email and/or password"], status: 401
+        end
     end
 
     def destroy
@@ -14,6 +15,7 @@ class Api::SessionsController < ApplicationController
             render json: {}
         else 
             render json: ["No User Signed In!"], status: 404
+        end
     end
 
 end
