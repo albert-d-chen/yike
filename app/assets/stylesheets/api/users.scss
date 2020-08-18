@@ -1,3 +1,228 @@
 // Place all the styles related to the api/Users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.login-modal .is-open{
+    display: block;
+    font-family: 'Pathway Gothic One', sans-serif;
+}
+
+.login-modal-form {
+    position: absolute;
+    top: 100px;
+    left: 50%;
+    margin-left: -220px;
+    width: 400px;
+    padding: 20px;
+    background: white;
+    z-index: 3;
+    border-radius: 0px;
+    border: 0px solid #000;
+}
+
+.login-modal-screen {
+    position: fixed;
+    background: rgba(0, 0, 0, 0.3);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+}
+
+
+.login-info {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+.login-button1{
+    display: flex;
+    text-align:center;
+    justify-content: center;
+}
+
+.login-signup{
+    display: flex;
+    text-align:center;
+    justify-content: center;
+    font-family: 'Pathway Gothic One', sans-serif;
+}
+
+.login-button2{
+    background-color: black;
+    font-family: 'Pathway Gothic One', sans-serif;
+    color: white;
+    width: 84%;
+    height: 40px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.login-box{
+    width: 80%;
+    height: 40px;
+    border: 1px solid rgba(200, 200, 200, .5);
+    outline: none;
+    padding-left: 10px;
+}
+
+.login-title{
+    display: block;
+    width: 200px;
+    margin-left: 100px;
+    text-align: center;
+    font-family: 'Pathway Gothic One', sans-serif;
+    font-size: 30px;
+}
+
+.login-disclaimer{
+    display: block;
+    width: 250px;
+    margin-left: 70px;
+    line-height: 20px;
+    text-align: center;
+    font-family: 'Pathway Gothic One', sans-serif;
+    color: rgba(170, 170, 170, 1);
+    padding: 5px;
+}
+
+
+.login-close {
+    position: absolute;
+    right: 32px;
+    top: 10px;
+    width: 12px;
+    height: 12px;
+    opacity: 0.2;
+}
+.login-close:hover {
+    opacity: 1;
+}
+.login-close:before, .login-close:after {
+    position: absolute;
+    left: 15px;
+    content: '';
+    height: 33px;
+    width: 2px;
+    background-color: #333;
+}
+.login-close:before {
+    transform: rotate(45deg);
+}
+.login-close:after {
+    transform: rotate(-45deg);
+}
+
+// .signup-join:hover{
+//     text-decoration: underline;
+// }
+
+.signup-modal .is-open{
+    display: block;
+}
+
+.signup-modal-form {
+    position: absolute;
+    top: 65px;
+    left: 50%;
+    margin-left: -220px;
+    width: 400px;
+    padding: 20px;
+    background: white;
+    z-index: 3;
+    border-radius: 0px;
+    border: 0px solid #000;
+}
+
+.signup-modal-screen {
+    position: fixed;
+    background: rgba(0, 0, 0, 0.3);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+}
+
+.signup-info {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+.signup-button1{
+    display: flex;
+    text-align:center;
+    justify-content: center;
+}
+
+.signup-button2{
+    background-color: black;
+    font-family: 'Pathway Gothic One', sans-serif;
+    color: white;
+    width: 80%;
+    height: 40px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.signup-box{
+    width: 80%;
+    height: 40px;
+    border: 1px solid rgba(200, 200, 200, .5);
+    outline: none;
+    padding-left: 10px;
+    
+}
+
+.signup-title{
+    text-align: center;
+    font-family: 'Pathway Gothic One', sans-serif;
+    font-size: 30px;
+}
+
+.signup-description{
+    display: block;
+    width: 230px;
+    margin-left: 83px;
+    line-height: 20px;
+    text-align: center;
+    font-family: 'Pathway Gothic One', sans-serif;
+    color: rgba(170, 170, 170, 1);
+    padding: 5px;
+}
+// .signup-close{
+//   display: block;
+//   justify-content: right;
+//   margin-left: 380px; /* This will render the 'X' */
+// }
+
+.signup-close {
+    position: absolute;
+    right: 32px;
+    top: 10px;
+    width: 12px;
+    height: 12px;
+    opacity: 0.2;
+}
+.signup-close:hover {
+    opacity: 1;
+}
+.signup-close:before, .signup-close:after {
+    position: absolute;
+    left: 15px;
+    content: '';
+    height: 33px;
+    width: 2px;
+    background-color: #333;
+}
+.signup-close:before {
+    transform: rotate(45deg);
+}
+.signup-close:after {
+    transform: rotate(-45deg);
+}

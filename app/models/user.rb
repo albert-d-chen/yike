@@ -3,7 +3,9 @@ class User < ApplicationRecord
     #format:{with:URI::MailTo::EMAIL_REGEXP}
     validates :password_digest, :session_token, presence: true
     validates :password, length: {minimum: 6}, allow_nil: true
-    
+    validates :first_name, presence:true
+    validates :last_name, presence:true
+
     attr_reader :password
     after_initialize :ensure_session_token!
 
