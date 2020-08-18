@@ -1,0 +1,169 @@
+// .nav-parent{
+//     list-style: none;
+//     width: 110%;
+//     height: 35px;
+//     margin-left: -8px;
+//     margin-top: -10px;
+//     padding: 0px;
+//     white-space: nowrap;
+//     overflow-x: auto;
+//     overflow-y: hidden;
+//     border-bottom: 1px solid rgba(170, 170, 170, 0.6);
+// }
+
+// .nav-parent > li{
+//     // float: left;
+//     display: inline-block;
+//     width: 2% ;
+//     height: 100%;
+//     font-size:12px;
+//     padding-left: 20px;
+//     // margin-top: 10px;
+//     background-color: white;
+//     font-family: 'Baloo Tamma 2', cursive;
+// }
+
+// .nav-login {
+//     left: 350px;
+//     display: inline-block;
+//     width: 2% ;
+//     height: 100%;
+//     background-color: white;
+//     color: rgba(170, 170, 170, 0.6); 
+//     font-family: 'Baloo Tamma 2', cursive;
+// }
+
+// .nav-link{
+//     color: rgba(50, 50, 50, 1);
+//     // font-family: 'Pathway Gothic One', sans-serif;
+// }
+
+// .nav-link:link{
+//     text-decoration: none;
+//     color: inherit;
+//     padding-top: 5px;
+// }
+
+// .nav-link:hover{
+//     padding-bottom: 4px;
+//     border-bottom: 1px solid black;
+//     font-weight: bold;
+//     color: black;
+// }
+
+// .nav-home{
+//     border-right: 1px solid rgba(170, 170, 170, 0.6);
+//     color: rgba(150, 150, 150, 1);
+//     margin-top: 3px;
+//     padding-top: 5px;
+//     padding-left: 5px;
+//     padding-right: 10px;
+// }
+
+
+.nav-parent{
+    display: flex;
+    justify-content: space-between;
+    // padding: -30px;
+    width: 100%;
+    height: 25px;
+    border-bottom: 1px solid rgba(170, 170, 170, 0.6);
+}
+
+.nav-left > ul, 
+.nav-right > ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+
+}
+
+.left-nav > ul > li {
+    display: flex;
+    margin-left: 5px;
+}
+
+.right-nav > ul > li {
+    display: flex;
+    margin-left: 10px;
+}
+
+.nav-left-ele {
+    margin-top: -12px;
+    margin-left: -30px;
+}
+
+.nav-right-ele{
+    margin-top: -14px;
+    margin-right: 60px;
+}
+
+.nav-link{
+    color: rgba(130, 130, 130, 1);
+    // font-family: 'Pathway Gothic One', sans-serif;
+}
+
+.nav-link:link{
+    text-decoration: none;
+    color: inherit;
+    padding-top: 5px;
+}
+
+.nav-link:hover{
+    padding-bottom: 4px;
+    border-bottom: 1px solid black;
+    font-weight: bold;
+    color: black;
+}
+
+.nav-parent > nav{
+     font-family: 'Baloo Tamma 2', cursive;
+     color: rgba(130, 130, 130, 1); 
+     font-size: 12px;
+}
+
+
+.nav-dropdown .nav-logged-in{
+    background: white;
+    display: flex; 
+    position: relative;
+    padding-top: 2px;
+}
+
+.dropdown-content{
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 120px;
+    margin-top: 26px;
+    margin-left: -25px;
+    cursor: pointer;
+}
+
+.nav-logged-in:hover{
+    padding-bottom: 4px;
+    border-bottom: 1px solid black;
+    font-weight: bold;
+    color: black;
+}
+
+.nav-logged-in:hover > .dropdown-content{
+    display:block;
+    border:1px solid rgba(130, 130, 130, 0.6);
+}
+
+.dropdown-content > div {
+    display:block;
+    float: none;
+    padding: 12px, 16px;
+    text-decoration: none;
+}
+
+.logout-dropdown {
+    margin: 20px;
+    color: black;
+}
+
+.logout-dropdown:hover{
+    color: rgba(130, 130, 130, 0.6);
+}

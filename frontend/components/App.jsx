@@ -8,9 +8,21 @@ import NavBarContainer from './navbar/navbar_container';
 
 const App = () => (
     <div>
-        <header>
-            <h1>Yike</h1>
-            <NavBarContainer />
+        <header className='nav-parent'>
+            <nav className='nav-left'>
+                <ul>
+                    <li>
+                        <div className='nav-left-ele'>Yike</div> 
+                    </li> 
+                </ul>
+            </nav>
+            <nav className='nav-right'>
+                <ul>
+                    <li>
+                        <div className='nav-right-ele'><NavBarContainer/></div>
+                    </li>
+                </ul>
+            </nav>
         </header>
         <AuthRoute path='/login' component={LoginFormContainer}/>
         <AuthRoute path='/signup' component={SignupFormContainer}/>

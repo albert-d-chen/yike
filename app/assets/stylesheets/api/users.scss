@@ -17,7 +17,7 @@
     padding: 20px;
     background: white;
     z-index: 3;
-    border-radius: 0px;
+    border-radius: 3px;
     border: 0px solid #000;
 }
 
@@ -49,6 +49,8 @@
     text-align:center;
     justify-content: center;
     font-family: 'Pathway Gothic One', sans-serif;
+    padding: 10px;
+    font-size: 14px;
 }
 
 .login-button2{
@@ -84,9 +86,10 @@
     margin-left: 70px;
     line-height: 20px;
     text-align: center;
-    font-family: 'Pathway Gothic One', sans-serif;
+    font-family: 'Baloo Tamma 2', cursive;
     color: rgba(170, 170, 170, 1);
     padding: 5px;
+    font-size: 14px;
 }
 
 
@@ -114,6 +117,16 @@
 }
 .login-close:after {
     transform: rotate(-45deg);
+}
+
+.login-signup-entry{
+    text-align: right;
+}
+
+.login-errors{
+    color: red;
+    list-style: none;
+    font-family: 'Baloo Tamma 2', cursive;
 }
 
 // .signup-join:hover{
@@ -183,17 +196,20 @@
     text-align: center;
     font-family: 'Pathway Gothic One', sans-serif;
     font-size: 30px;
+    
 }
 
 .signup-description{
     display: block;
     width: 230px;
-    margin-left: 83px;
+    margin-left: 80px;
     line-height: 20px;
     text-align: center;
-    font-family: 'Pathway Gothic One', sans-serif;
+    font-family: 'Baloo Tamma 2', cursive;
     color: rgba(170, 170, 170, 1);
     padding: 5px;
+    word-spacing: 3px;
+    font-size: 12px;
 }
 // .signup-close{
 //   display: block;
@@ -225,4 +241,19 @@
 }
 .signup-close:after {
     transform: rotate(-45deg);
+}
+
+.signup-errors{
+    color: red;
+    list-style: none;
+    font-family: 'Baloo Tamma 2', cursive;
+}
+
+.typical{
+    display: block;
+    width: 200px;
+    margin-left: 100px;
+    text-align: center;
+    font-family: 'Pathway Gothic One', sans-serif;
+    font-size: 30px;
 }
