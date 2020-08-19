@@ -24,6 +24,7 @@ const App = () => (
                 </ul>
             </nav>
         </header>
+            <img src={window.images.logo} className='nav-logo' />
         <AuthRoute path='/login' component={LoginFormContainer}/>
         <AuthRoute path='/signup' component={SignupFormContainer}/>
     </div>
