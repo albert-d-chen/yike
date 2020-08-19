@@ -5,6 +5,7 @@ import {AuthRoute, ProtectedRoute} from '../util/route_util';
 import SignupFormContainer from './session_forms/signup_form_container';
 import LoginFormContainer from './session_forms/login_form_container';
 import NavBarContainer from './navbar/navbar_container';
+import SplashCarousel from './splash/splash';
 
 const App = () => (
     <div>
@@ -24,7 +25,9 @@ const App = () => (
                 </ul>
             </nav>
         </header>
-            <img src={window.images.logo} className='nav-logo' />
+        <img src={window.images.logo} className='nav-logo' />
+        <br/>
+        <div><SplashCarousel/></div>
         <AuthRoute path='/login' component={LoginFormContainer}/>
         <AuthRoute path='/signup' component={SignupFormContainer}/>
     </div>
