@@ -13,10 +13,10 @@ class SplashCarousel extends React.Component {
                             <img src={window.images.splash1}  height= '800px' width='500px'/>
                         </div>
                         <div>
-                        <img src={window.images.splash2} height='800px' width='500px'/>
+                            <img src={window.images.splash2} height='800px' width='500px'/>
                         </div>
                         <div>
-                        <img src={window.images.splash3} height='800px' width='500px'/>
+                            <img src={window.images.splash3} height='800px' width='500px'/>
                         </div>
                 </Carousel>
 

@@ -18,7 +18,7 @@ class LoginForm extends React.Component {
         const user = Object.assign({}, this.state);
         this.props.processForm(user);
     }
-
+//this.props.history.push('/');
     update(field) {
         return (e) => this.setState({ [field]: e.currentTarget.value })
     }
@@ -39,8 +39,8 @@ class LoginForm extends React.Component {
         e.preventDefault();
         const demoUser = { email: '8kobe24@mamba.com', password: 'password', first_name: 'Kobe', last_name:'Bryant' };
         let { email, password, first_name, last_name} = demoUser;
-        
-        let interval = 150;
+
+        let interval = 100;
 
         let login = () => {
             this.props.processForm(this.state);

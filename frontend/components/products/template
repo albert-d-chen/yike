@@ -1,0 +1,35 @@
+render() {
+        const products = this.props.products;
+        const men = products.filter(product => product.gender === 'M');
+        const women = products.filter(product => product.gender === 'F');
+        const menBasketball = men.filter(product => product.category === 'Basketball Shoes' );
+        const menRunning = men.filter(product => product.category === 'Running Shoes');
+        const menCasual = men.filter(product => product.category === 'Casual Shoes');
+
+        return (
+            <div>
+                <div>
+                    <h1>Men's:</h1>
+                    {men.map(product => <ProductIndexItem key={product.id} product={product}/>)}
+                    <ul>
+                        <li>
+                            <h3>Basketball Shoes</h3>
+                            {menBasketball.map(product => <ProductIndexItem key={product.id} product={product} />)}
+                        </li>
+                        <li>
+                            <h3>Running Shoes</h3>
+                            {menRunning.map(product => <ProductIndexItem key={product.id} product={product} />)}
+                        </li>
+                        <li>
+                            <h3>Basketball Shoes</h3>
+                            {menCasual.map(product => <ProductIndexItem key={product.id} product={product} />)}
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h1>Women's:</h1>
+                    {women.map(product => <ProductIndexItem key={product.id} product={product} />)}
+                </div>
+            </div>
+        )
+    }

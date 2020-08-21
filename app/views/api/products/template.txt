@@ -1,0 +1,14 @@
+json.array! do 
+    json.photos do |photo|
+        json.photo url_for(@product.photo)
+    end
+end
+
+@product.photos do |photo|
+    json.photo url_for(photo)
+end 
+
+
+if product.photo.attached?
+    json.photo url_for(product.photo)
+end

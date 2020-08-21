@@ -1,35 +1,70 @@
 import React from 'react';
-import {Route} from 'react-router-dom';
-import {AuthRoute, ProtectedRoute} from '../util/route_util';
+import {Route, Link} from 'react-router-dom';
+import {AuthRoute, ProtectedRoute, HomeRoute} from '../util/route_util';
 
 import SignupFormContainer from './session_forms/signup_form_container';
 import LoginFormContainer from './session_forms/login_form_container';
 import NavBarContainer from './navbar/navbar_container';
-import SplashCarousel from './splash/splash';
+import ProductsNavBarContainer from './products_navbar/products_navbar';
+
+import ProductIndexContainer from '../components/products/product_index_container';
+import ProductShowContainer from '../components/products/product_show_container';
+import MenIndexContainer from '../components/products/men_index/men_index_container';
+import WomenIndexContainer from '../components/products/women_index/women_index_container';
+import MBasketballIndexContainer from '../components/products/men_index/basketball_index/basketball_index_container';
+import MRunningIndexContainer from '../components/products/men_index/running_index/running_index_container';
+import MCasualIndexContainer from '../components/products/men_index/casual_index/casual_index_container';
+import WBasketballIndexContainer from '../components/products/women_index/basketball_index/basketball_index_container';
+import WRunningIndexContainer from '../components/products/women_index/running_index/running_index_container';
+import WCasualIndexContainer from '../components/products/women_index/casual_index/casual_index_container';
+
+
+
+import Splash from './splash/splash';
+// import SplashCarousel from './splash/splash';
+
 
 const App = () => (
     <div>
-        <header className='nav-parent'>
-            <nav className='nav-left'>
-                <ul>
-                    <li>
-                        <div className='nav-left-ele'>Yike</div> 
-                    </li> 
-                </ul>
-            </nav>
-            <nav className='nav-right'>
-                <ul>
-                    <li>
-                        <div className='nav-right-ele'><NavBarContainer/></div>
-                    </li>
-                </ul>
-            </nav>
-        </header>
-        <img src={window.images.logo} className='nav-logo' />
+        <div>
+            <header className='nav-parent'>
+                <nav className='nav-left'>
+                    <ul>
+                        <li>
+                            <div className='nav-left-ele top'>Yike</div> 
+                        </li> 
+                    </ul>
+                </nav>
+                <nav className='nav-right'>
+                    <ul>
+                        <li>
+                            <div className='nav-right-ele'><NavBarContainer/></div>
+                        </li>
+                    </ul>
+                </nav>
+            </header>
+            <ProductsNavBarContainer/>  
+        </div>
+
         <br/>
-        <div><SplashCarousel/></div>
+
+        {/* <div><SplashCarousel/></div> */}
+
         <AuthRoute path='/login' component={LoginFormContainer}/>
         <AuthRoute path='/signup' component={SignupFormContainer}/>
+        <Route exact path='/products' component={ProductIndexContainer} />
+        <Route exact path='/' component={Splash}/>
+        <Route path='/products/:productId' component={ProductShowContainer} />
+
+        <Route exact path = '/men' component={MenIndexContainer} />
+        <Route exact path = '/women' component={WomenIndexContainer} />
+        <Route exact path = '/mensbasketball' component={MBasketballIndexContainer} />
+        <Route exact path = '/mensrunning' component={MRunningIndexContainer} />
+        <Route exact path = '/menscasual' component={MCasualIndexContainer} />
+        <Route exact path = '/womensbasketball' component={WBasketballIndexContainer} />
+        <Route exact path = '/womensrunning' component={WRunningIndexContainer} />
+        <Route exact path = '/womenscasual' component={WCasualIndexContainer} />
+        
     </div>
 );
 
