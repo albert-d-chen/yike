@@ -12,7 +12,7 @@ class BasketballIndex extends React.Component {
 
         return (
             <div>
-                <div>
+                <div className='index'>
                     <h1>Basketball's:</h1>
                     {basketball.map(product => <BasketballIndexItem key={product.id} product={product} />)}
                 </div>

@@ -12,7 +12,7 @@ class RunningIndex extends React.Component {
 
         return (
             <div>
-                <div>
+                <div className='index'>
                     <h1>Running's:</h1>
                     {running.map(product => <RunningIndexItem key={product.id} product={product} />)}
                 </div>

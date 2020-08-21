@@ -12,7 +12,7 @@ class CasualIndex extends React.Component {
 
         return (
             <div>
-                <div>
+                <div className='index'>
                     <h1>casual's:</h1>
                     {casual.map(product => <CasualIndexItem key={product.id} product={product} />)}
                 </div>

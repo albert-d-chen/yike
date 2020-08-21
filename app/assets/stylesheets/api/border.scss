@@ -1,0 +1,25 @@
+.border-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.border {
+    position: relative;
+    top: 100px;
+    left: 0px;
+    right: 0px;
+    width: 100%;
+    border-bottom: 1px solid rgba(170, 170, 170, 0.6);
+    background: rgba(240, 240, 240, .5);
+    height: 50px;
+}
+
+// .extraborder {
+//     display: block;
+//     background: white;
+//     height: 100px;
+//     width: 100%;
+//     z-index: 99;
+// }

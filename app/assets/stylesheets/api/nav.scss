@@ -188,3 +188,17 @@ body{
     position: absolute;
 
 }
+
+// .main-nav{
+//     position: absolute;
+// }
+
+.nav-header{
+    position: fixed;
+    width: 100%;
+    // background: black;
+    // top: 0;
+    // overflow: hidden;
+    z-index: 99999;
+    background: white;
+}

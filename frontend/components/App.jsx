@@ -26,7 +26,7 @@ import Splash from './splash/splash';
 
 const App = () => (
     <div>
-        <div>
+        <div className='nav-header'>
             <header className='nav-parent'>
                 <nav className='nav-left'>
                     <ul>
@@ -45,7 +45,14 @@ const App = () => (
             </header>
             <ProductsNavBarContainer/>  
         </div>
-
+        <div className='stop'>
+        <div className='border'>
+            <div className='border-text'>
+                <div className='border-caption'>JUST YEET IT.</div>
+                <div className='border-caption'>MAMBA MENTALITY.</div>
+            </div>
+        </div>
+        </div>
         <br/>
 
         {/* <div><SplashCarousel/></div> */}

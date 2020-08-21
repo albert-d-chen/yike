@@ -12,7 +12,7 @@ class WomenIndex extends React.Component {
 
         return (
             <div>
-                <div>
+                <div className='index'>
                     <h1>Women's:</h1>
                     {women.map(product => <WomenIndexItem key={product.id} product={product} />)}
                 </div>
