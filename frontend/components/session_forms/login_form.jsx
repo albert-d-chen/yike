@@ -11,6 +11,7 @@ class LoginForm extends React.Component {
         }
         this.handleSubmit = this.handleSubmit.bind(this);
         this.loginDemoUser = this.loginDemoUser.bind(this);
+        // this.clearSessionErrors = this.clearSessionErrors.bind(this);
     }
 
     handleSubmit(e) {
@@ -18,7 +19,17 @@ class LoginForm extends React.Component {
         const user = Object.assign({}, this.state);
         this.props.processForm(user);
     }
-//this.props.history.push('/');
+//.then () => this.props.history.push('/');
+
+    // clearSessionErrors(e) {
+    //     e.preventDefault();
+    //     this.props.clearErrors();
+    // }
+
+    componentWillUnmount() {
+        this.props.clearErrors()
+    }
+
     update(field) {
         return (e) => this.setState({ [field]: e.currentTarget.value })
     }
