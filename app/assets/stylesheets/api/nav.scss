@@ -114,8 +114,8 @@
 }
 
 .nav-link:hover{
-    padding-bottom: 4px;
-    border-bottom: 1px solid black;
+    padding-bottom: 5px;
+    border-bottom: 2px solid black;
     font-weight: bold;
     color: black;
 }
@@ -178,7 +178,7 @@
     display: flex;
     width: 65px;
     margin-left: 40px;
-    margin-top: 17px;
+    margin-top: 12px;
 }
 
 body{
@@ -202,3 +202,4 @@ body{
     z-index: 99999;
     background: white;
 }
+

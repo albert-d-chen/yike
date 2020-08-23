@@ -1,0 +1,2 @@
+module Api::ShoppingCartsHelper
+end

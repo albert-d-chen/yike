@@ -43,6 +43,7 @@
     font-family: 'Pathway Gothic One', sans-serif;
     font-size: 20px;
     font-weight: bold;
+    letter-spacing: 1px;
 }
 
 .prod-nav-link:link{
@@ -88,6 +89,7 @@
 
 .prod-nav-link:hover {
     color: rgba(130, 130, 130, 0.6);
+    
 }
 
 .prod-nav-dropdown-content > a{
@@ -101,6 +103,6 @@
     text-decoration: none;
 }
 
-
-
-
+.inline2:hover{
+    font-style: italic;
+}

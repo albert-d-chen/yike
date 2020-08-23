@@ -24,73 +24,6 @@ user2 = User.create!(
     password: 'password'
 )
 
-# product1 = Product.create!(
-#     product_name: 'Kobe Elite 7',
-#     description: 'Everything negative - pressure, challenges - is all an opportunity for me to rise.',
-#     price: 200,
-#     category: 'basketball',
-#     color: 'black',
-#     size: 10,
-#     gender: 'M',
-# )
-# file1 = open('https://yike-dev.s3-us-west-1.amazonaws.com/kobeelite7.jpg')
-# product1.photo.attach(io: file1, filename: 'kobeelite7.jpg')
-
-
-# product2 = Product.create!(
-#     product_name: 'Kobe Elite 9',
-#     description: "I don't want to be the next Michael Jordan, I only want to be Kobe Bryant.",
-#     price: 350,
-#     category: 'basketball',
-#     color: 'black',
-#     size: 10,
-#     gender: 'M',
-# )
-# file2 = open('https://yike-dev.s3-us-west-1.amazonaws.com/kobeelite9.jpg')
-# product2.photo.attach(io: file2, filename: 'kobeelite9.jpg')
-
-# product3 = Product.create!(
-#     product_name: 'Kobe Elite 11',
-#     description: "These young guys are playing checkers. I'm out there playing chess.",
-#     price: 350,
-#     category: 'running',
-#     color: 'red',
-#     size: 10,
-#     gender: 'M',
-# )
-# file3 = open('https://yike-dev.s3-us-west-1.amazonaws.com/kobeelite11.jpg')
-# product3.photo.attach(io: file3, filename: 'kobeelite11.jpg')
-
-
-# product4 = Product.create!(
-#     product_name: 'Kobe 8 (WTK)',
-#     description: "What the Kobe.",
-#     price: 900,
-#     category: 'casual',
-#     color: 'orange',
-#     size: 10,
-#     gender: 'M',
-# )
-
-# file4 = open('https://yike-dev.s3-us-west-1.amazonaws.com/kobewtk8.png')
-# product4.photo.attach(io: file4, filename: 'kobewtk8.png')
-
-# product5 = Product.create!(
-#     product_name: 'Kobe Air Max 3',
-#     description: "Winning takes precedence overall. There’s no gray area. No almosts.",
-#     price: 150,
-#     category: 'casual',
-#     color: 'white',
-#     size: 7,
-#     gender: 'F',
-# )
-
-# file5 = open('https://yike-dev.s3-us-west-1.amazonaws.com/Wkobeairmax3.jpg')
-# product5.photo.attach(io: file5, filename: 'Wkobeairmax3.png')
-
-
-
-
 
 
 
@@ -98,10 +31,10 @@ product6 = Product.create!(
     product_name: 'Kobe V ProTro',
     description: "When we are saying this cannot be accomplished, this cannot be done, then we are short-changing ourselves. My brain, it cannot process failure. It will not process failure.",
     price: 240,
-    category: 'casual',
+    category: 'Casual',
     color: 'purple',
     size: 10,
-    gender: 'M',
+    gender: "Men's",
 )
 
 file6a = open('https://yike-dev.s3-us-west-1.amazonaws.com/kobevprotro5a.jpg')
@@ -117,10 +50,10 @@ product7 = Product.create!(
     product_name: 'Kobe Adapt Tie-Dye',
     description: "Winning takes precedence overall. There’s no gray area. No almosts.",
     price: 300,
-    category: 'basketball',
+    category: 'Basketball',
     color: 'white',
     size: 10,
-    gender: 'M',
+    gender: "Men's",
 )
 
 file7a = open('https://yike-dev.s3-us-west-1.amazonaws.com/kobeadapttiedyeA.jpg')
@@ -136,17 +69,75 @@ product8 = Product.create!(
     product_name: 'Kobe Infinity',
     description: "I don't want to be the next Michael Jordan, I only want to be Kobe Bryant.",
     price: 170,
-    category: 'running',
+    category: 'Running',
     color: 'black',
     size: 10,
-    gender: 'M',
+    gender: "Men's",
 )
 
 file8a = open('https://yike-dev.s3-us-west-1.amazonaws.com/kobeinfinityA.jpg')
 product8.photos.attach(io: file8a, filename: 'kobeinfinitya.jpg')
-file8b = open('https://yike-dev.s3-us-west-1.amazonaws.com/kobeinfinityA.jpg')
+file8b = open('https://yike-dev.s3-us-west-1.amazonaws.com/kobeinfinityB.jpg')
 product8.photos.attach(io: file8b, filename: 'kobeinfinityb.jpg')
-file8c = open('https://yike-dev.s3-us-west-1.amazonaws.com/kobeinfinityA.jpg')
+file8c = open('https://yike-dev.s3-us-west-1.amazonaws.com/kobeinfinityC.jpg')
 product8.photos.attach(io: file8c, filename: 'kobeinfinityc.jpg')
-file8d = open('https://yike-dev.s3-us-west-1.amazonaws.com/kobeinfinityA.jpg')
+file8d = open('https://yike-dev.s3-us-west-1.amazonaws.com/kobeinfinityD.jpg')
 product8.photos.attach(io: file8d, filename: 'kobeinfinityd.jpg')
+
+
+product9 = Product.create!(
+    product_name: 'Kobe Air Force',
+    description: "I'll do whatever it takes to win games, whether it's sitting on a bench waving a towel, handing a cup of water to a teammate, or hitting the game-winning shot.",
+    price: 100,
+    category: 'Casual',
+    color: 'white',
+    size: 7,
+    gender: "Women's",
+)
+
+file9a = open('https://yike-dev.s3-us-west-1.amazonaws.com/WkobeairforceA.jpg')
+product9.photos.attach(io: file9a, filename: 'Wkobeairforcea.jpg')
+file9b = open('https://yike-dev.s3-us-west-1.amazonaws.com/WkobeairforceB.jpg')
+product9.photos.attach(io: file9b, filename: 'Wkobeairforceb.jpg')
+file9c = open('https://yike-dev.s3-us-west-1.amazonaws.com/WkobeairforceC.jpg')
+product9.photos.attach(io: file9c, filename: 'Wkobeairforcec.jpg')
+file9d = open('https://yike-dev.s3-us-west-1.amazonaws.com/WkobeairforceD.jpg')
+product9.photos.attach(io: file9d, filename: 'Wkobeairforced.jpg')
+
+product10 = Product.create!(
+    product_name: 'Kobe Space Hippie',
+    description: "Everything negative - pressure, challenges - is all an opportunity for me to rise.",
+    price: 150,
+    category: 'Running',
+    color: 'pink',
+    size: 7,
+    gender: "Women's",
+)
+
+file10a = open('https://yike-dev.s3-us-west-1.amazonaws.com/WkobespacehippieA.jpg')
+product10.photos.attach(io: file10a, filename: 'Wkobespacehippiea.jpg')
+file10b = open('https://yike-dev.s3-us-west-1.amazonaws.com/WkobespacehippieB.jpg')
+product10.photos.attach(io: file10b, filename: 'Wkobespacehippieb.jpg')
+file10c = open('https://yike-dev.s3-us-west-1.amazonaws.com/WkobespacehippieC.jpg')
+product10.photos.attach(io: file10c, filename: 'Wkobespacehippiec.jpg')
+file10d = open('https://yike-dev.s3-us-west-1.amazonaws.com/WkobespacehippieD.jpg')
+product10.photos.attach(io: file10d, filename: 'Wkobespacehippied.jpg')
+
+product11 = Product.create!(
+    product_name: 'Kobe Zoom',
+    description: "If you're afraid to fail, then you're probably going to fail.",
+    price: 200,
+    category: 'Basketball',
+    color: 'blue',
+    size: 7,
+    gender: "Women's",
+)
+
+file11a = open('https://yike-dev.s3-us-west-1.amazonaws.com/WkobezoomA.jpg')
+product11.photos.attach(io: file11a, filename: 'Wkobezooma.jpg')
+file11b = open('https://yike-dev.s3-us-west-1.amazonaws.com/WkobezoomB.jpg')
+product11.photos.attach(io: file11b, filename: 'Wkobezoomb.jpg')
+file11c = open('https://yike-dev.s3-us-west-1.amazonaws.com/WkobezoomC.jpg')
+product11.photos.attach(io: file11c, filename: 'Wkobezoomc.jpg')
+file11d = open('https://yike-dev.s3-us-west-1.amazonaws.com/WkobezoomD.jpg')
+product11.photos.attach(io: file11d, filename: 'Wkobezoomd.jpg')

@@ -8,12 +8,24 @@ class MenIndex extends React.Component {
 
     render() {
         const products = this.props.products;
-        const men = products.filter(product => product.gender === 'M');
+        const men = products.filter(product => product.gender === "Men's");
 
         return (
-            <div>
-                <div className='index'>
-                    <h1>Men's:</h1>
+            <div className='index-body'>
+                <div className='product-filter'>
+                    <div>
+                        <div className='mini-header'>Men's / Shoes</div>
+                        <div className='max-header'>All Shoes</div>
+                    </div>
+
+                    <div className='sort'>
+                        <div className='collection-sort'>
+                            <div>Filter</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div className='products'>
                     {men.map(product => <MenIndexItem key={product.id} product={product} />)}
                 </div>
             </div>

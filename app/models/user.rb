@@ -1,3 +1,16 @@
+# == Schema Information
+#
+# Table name: users
+#
+#  id              :bigint           not null, primary key
+#  email           :string           not null
+#  password_digest :string           not null
+#  session_token   :string           not null
+#  created_at      :datetime         not null
+#  updated_at      :datetime         not null
+#  first_name      :string           not null
+#  last_name       :string           not null
+#
 class User < ApplicationRecord
     validates :email, presence: true, uniqueness: true, length: {maximum: 30} 
     #format:{with:URI::MailTo::EMAIL_REGEXP}
@@ -9,6 +22,10 @@ class User < ApplicationRecord
     attr_reader :password
     after_initialize :ensure_session_token!
 
+    has_one :cart,
+        foreign_key: :user_id,
+        class_name: :ShoppingCart
+        
     def self.find_by_credentials(email, password)
         @user = User.find_by(email: email)
         if @user && @user.is_password?(password)

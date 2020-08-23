@@ -5,13 +5,16 @@ class ProductShow extends React.Component{
     // constructor(props) {
     //     super(props);
     // }
-
+    constructor(props){
+        super(props);
+        this.highlightBorder = this.highlightBorder.bind(this);
+    }
     componentDidMount(){
         this.props.getProduct(this.props.match.params.productId);
     }
 
     renderGender(){
-        const gender = (this.props.product.gender ==='M') ? (
+        const gender = (this.props.product.gender ==="Men's") ? (
             'Men'
         ) : (
             'Women'
@@ -19,30 +22,45 @@ class ProductShow extends React.Component{
         return gender;
     }
 
+    highlightBorder(){
+        var ele = document.getElementsByClassName('product-icon');
+        ele.classList.toggle('style');
+    }
+    
     render() {
         let product = this.props.product 
         if (!product) {
             return null;
         } else {
                return(
-                <div>
-                    <div className='show-parent'>
-                        <div className='show-left'>        
+                <div className='product'>
+                    <div className='product-card-show'>
+                        <div className='product-image-show'>        
                                 {this.props.product.photoUrls.map((photo,idx) => (
-                                    <img src={photo} key = {idx}></img>
+                                    <img src={photo} key = {idx} className='product-image-each'></img>
                                 ))}
-                                {/* <img src={this.props.product.photo} height='200px' width='200px'  /> */}
                         </div>
+                        
+                        <div className='product-info-show'>
+                            <div className='product-price-show'>
+                                <div className='product-price-show-mini'>{this.props.product.gender}&nbsp;{this.props.product.category} Shoe</div>
+                                <div className='product-price-show-mini'>${this.props.product.price}</div>
+                            </div>
+                            <div className='product-name-head'>{this.props.product.product_name}</div>
+                            
+                               <div ><img onClick={this.highlightBorder} className='product-icon' src={product.photoUrls ? product.photoUrls[0] : null} ></img></div>
+                            
+                            <div className='product-description'>"{this.props.product.description}"</div>
+                            
 
-                        <div className='show-right'>
-                            <ul>   
+
+                            <ul className='product-style'>
                                 <li>
-                                    <div>{this.renderGender()}'s Shoe</div>
-                                    <div>{this.props.product.price}</div>
+                                    Shown: {this.props.product.color}
                                 </li>
-                                <li>{this.props.product.product_name}</li>
-                                <li>{this.props.product.size}</li>
-                                <li>{this.props.product.description}</li>
+                                <li>
+                                    Style: KOBE4EVER
+                                </li>
                             </ul>
                         </div>
                     </div>

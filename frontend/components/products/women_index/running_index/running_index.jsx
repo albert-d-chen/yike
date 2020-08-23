@@ -8,12 +8,24 @@ class RunningIndex extends React.Component {
 
     render() {
         const products = this.props.products;
-        const running = products.filter(product => product.gender === 'F' && product.category === 'running');
+        const running = products.filter(product => product.gender === "Women's" && product.category === 'Running');
 
         return (
-            <div>
-                <div>
-                    <h1>Running:</h1>
+            <div className='index-body'>
+                <div className='product-filter'>
+                    <div>
+                        <div className='mini-header'>Women's / Shoes</div>
+                        <div className='max-header'>Running Shoes</div>
+                    </div>
+
+                    <div className='sort'>
+                        <div className='collection-sort'>
+                            <div>Filter</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div className='products'>
                     {running.map(product => <RunningIndexItem key={product.id} product={product} />)}
                 </div>
             </div>

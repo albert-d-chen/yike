@@ -1,8 +1,11 @@
 .border-text {
     display: flex;
+    width: 95%;
     justify-content: center;
     align-items: center;
-    padding: 20px;
+    padding: 15px;
+    letter-spacing: 2px;
+    font-family: 'Baloo Tamma 2', cursive;
 }
 
 .border {
@@ -14,6 +17,7 @@
     border-bottom: 1px solid rgba(170, 170, 170, 0.6);
     background: rgba(240, 240, 240, .5);
     height: 50px;
+    overflow:hidden;
 }
 
 // .extraborder {
@@ -23,3 +27,72 @@
 //     width: 100%;
 //     z-index: 99;
 // }
+
+.border-caption1{
+    padding-right: 65px;
+    position:relative;
+}
+
+.border-caption3{
+    // background: black;
+    color: aqua;
+    border-radius: 2px;
+    animation: slide 10s linear infinite;
+    
+}
+.border-caption4{
+    // background: black;
+    color: rgb(245, 59, 161);
+    border-radius: 2px;
+    // animation: slide 4s linear infinite;
+    
+}
+.border-caption5{
+    // background: black;
+    color: rgb(0, 255, 0);
+    border-radius: 2px;
+    // animation: slide 4s linear infinite;
+
+}
+
+.slider2 div {
+    height: 50px;
+    margin-bottom: 50px;
+    text-align:center;
+
+}
+
+.slider2{
+    overflow:hidden;
+}
+
+@keyframes slide {
+    0% {margin-top: 0px; }
+    10% {margin-top: -200px;}
+    33% {margin-top: -200px;}
+    38%{margin-top: -100px;}
+    66% {margin-top: -100px;}
+    71% {margin-top: 0px;}
+    72% {margin-top: 0px;}
+    80% {margin-top: 0px;}
+    100% {margin-top: 0px;}
+}
+
+.slider-wrap{
+    display: flex;
+}
+
+.border-text .slider2{
+    // margin-right: 40px;
+    // overflow: hidden;
+}
+
+.test{
+    position: absolute;
+    margin-left: 20px;
+}
+
+.border-caption2{
+    position:relative;
+    margin-left: -10px;
+}

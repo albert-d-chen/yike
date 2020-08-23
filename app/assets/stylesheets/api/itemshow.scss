@@ -1,0 +1,89 @@
+.product-image-each {
+    width: 462px;
+    height: 578px;
+    padding: 7px;
+    position: relative;
+}
+
+.product-show {
+    display: flex;
+    position: relative;
+    top: 300px;
+    width: 92%;
+    padding-left: 50px;
+    flex-wrap: wrap;
+}
+
+.product-card-show{
+    flex-grow: 1;
+    flex-basis: 50%;
+    display: flex;
+    position: relative;
+    width: 96%;
+    top: 125px;
+    margin-left: 50px;
+
+}
+
+.product-image-show{
+    width: 72%;
+
+}
+
+.product-info-show{
+    padding: 5px;
+    width: 22%;
+}
+
+
+.product-price-show{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.product-price-show-mini{
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.product-name-head{
+    font-size: 30px;
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+.product-description{
+     font-family: 'Baloo Tamma 2', cursive;
+     letter-spacing: 1px;
+     font-size: 14px;
+}
+
+.product-style{
+     font-family: 'Baloo Tamma 2', cursive;
+     letter-spacing: 1px;
+     font-size: 14px;
+}
+
+.product-icon{
+    width: 70px;
+    height: 70px;
+    border: 1px solid rgba(130, 130, 130, 0.6);
+    // border: 1px solid black;
+    border-radius: 3px;
+    margin-bottom: 20px;
+}
+
+.product-icon:hover{
+    border: 1px solid black;
+    border-radius: 3px;
+}
+
+.product-icon style{
+    width: 70px;
+    height: 70px;
+    border: 1px solid black;
+    border-radius: 3px;
+}

@@ -8,17 +8,29 @@ class CasualIndex extends React.Component {
 
     render() {
         const products = this.props.products;
-        const casual = products.filter(product => product.gender === 'F' && product.category === 'casual');
+        const casual = products.filter(product => product.gender === "Women's"  && product.category === 'Casual');
 
         return (
-            <div>
-                <div>
-                    <h1>Casual:</h1>
-                    {casual.map(product => <CasualIndexItem key={product.id} product={product} />)}
+                <div className='index-body'>
+                    <div className='product-filter'>
+                        <div>
+                            <div className='mini-header'>Women's / Shoes</div>
+                            <div className='max-header'>Casual Shoes</div>
+                        </div>
+
+                        <div className='sort'>
+                            <div className='collection-sort'>
+                                <div>Filter</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className='products'>
+                        {casual.map(product => <CasualIndexItem key={product.id} product={product} />)}
+                    </div>
                 </div>
-            </div>
-        )
-    }
+            )
+        }
 }
 
 export default CasualIndex;

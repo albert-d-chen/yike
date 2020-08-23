@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom';
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from 'react-responsive-carousel';
 
-
 class SplashCarousel extends React.Component {
     render() {
         return (
@@ -19,7 +18,6 @@ class SplashCarousel extends React.Component {
                             <img src={window.images.splash3} height='800px' width='500px'/>
                         </div>
                 </Carousel>
-
             </div>
         );
     }

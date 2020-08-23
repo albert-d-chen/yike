@@ -10,9 +10,23 @@ class ProductIndex extends React.Component {
         const products = this.props.products;
 
         return (
-            <div className='index'>
-                <h1>All:</h1>
-                {products.map(product => <ProductIndexItem key={product.id} product={product} />)}
+            <div className='index-body'>
+                <div className='product-filter'>
+                    <div>
+                        <div className='mini-header'>All / Shoes</div>
+                        <div className='max-header'>All Shoes</div>
+                    </div>
+
+                    <div className='sort'>
+                        <div className='collection-sort'>
+                            <div>Filter</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div className='products'>
+                    {products.map(product => <ProductIndexItem key={product.id} product={product} />)}
+                </div>
             </div>
         )
     }

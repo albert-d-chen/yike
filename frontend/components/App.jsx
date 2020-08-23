@@ -45,14 +45,23 @@ const App = () => (
             </header>
             <ProductsNavBarContainer/>  
         </div>
-        <div className='stop'>
-        <div className='border'>
-            <div className='border-text'>
-                <div className='border-caption'>JUST YEET IT.</div>
-                <div className='border-caption'>MAMBA MENTALITY.</div>
+
+            <div className='border'>
+                <div className='slider-wrap'>
+                    
+                <div className='border-text slider2' style={{marginRight: "40px"}}>
+                            <div className='border-caption1'>JUST&nbsp;</div> 
+                            <div className='test'>
+                                <div className='border-caption3'>YEET</div>
+                                <div className='border-caption4'>EAT</div>
+                                <div className='border-caption5'>CODE</div>
+                            </div>
+                            <div className='border-caption2'>&nbsp;IT.</div>
+                    </div>
+                   
+                </div>
             </div>
-        </div>
-        </div>
+
         <br/>
 
         {/* <div><SplashCarousel/></div> */}
