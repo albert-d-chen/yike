@@ -20,7 +20,7 @@ import WCasualIndexContainer from '../components/products/women_index/casual_ind
 
 
 
-import Splash from './splash/splash';
+import Splash from './splash/home';
 // import SplashCarousel from './splash/splash';
 
 
@@ -31,7 +31,7 @@ const App = () => (
                 <nav className='nav-left'>
                     <ul>
                         <li>
-                            <div className='nav-left-ele top'>Yike</div> 
+                            <div className='nav-left-ele top'><Link to="/" className='nav-yike-link'>Yike</Link></div> 
                         </li> 
                     </ul>
                 </nav>
@@ -46,24 +46,24 @@ const App = () => (
             <ProductsNavBarContainer/>  
         </div>
 
-            <div className='border'>
-                <div className='slider-wrap'>
-                    
-                <div className='border-text slider2' style={{marginRight: "40px"}}>
-                            <div className='border-caption1'>JUST&nbsp;</div> 
-                            <div className='test'>
-                                <div className='border-caption3'>YEET</div>
-                                <div className='border-caption4'>EAT</div>
-                                <div className='border-caption5'>CODE</div>
-                            </div>
-                            <div className='border-caption2'>&nbsp;IT.</div>
-                    </div>
-                   
+        <div className='border'>
+            <div className='slider-wrap'>
+                
+            <div className='border-text slider2' style={{marginRight: "40px"}}>
+                        <div className='border-caption1'>JUST&nbsp;</div> 
+                        <div className='test'>
+                            <div className='border-caption3'>YEET</div>
+                            <div className='border-caption4'>EAT</div>
+                            <div className='border-caption5'>CODE</div>
+                        </div>
+                        <div className='border-caption2'>&nbsp;IT.</div>
                 </div>
+                
             </div>
+        </div>
 
         <br/>
-
+        
         {/* <div><SplashCarousel/></div> */}
 
         <AuthRoute path='/login' component={LoginFormContainer}/>

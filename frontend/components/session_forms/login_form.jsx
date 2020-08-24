@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Typical from 'react-typical';
+import Home from '../splash/home'
 
 class LoginForm extends React.Component {
     constructor(props) {
@@ -132,7 +133,7 @@ class LoginForm extends React.Component {
                             </Link>
                         </div>
                     </form>
-                    <div className='login-modal-screen'></div>
+                    <div className='login-modal-screen'><Home/></div>
             </div>
         )
     }
