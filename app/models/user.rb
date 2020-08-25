@@ -22,9 +22,9 @@ class User < ApplicationRecord
     attr_reader :password
     after_initialize :ensure_session_token!
 
-    has_one :cart,
-        foreign_key: :user_id,
-        class_name: :ShoppingCart
+    has_many :cart_items,
+        class_name: :CartItem,
+        foreign_key: :user_id
         
     def self.find_by_credentials(email, password)
         @user = User.find_by(email: email)

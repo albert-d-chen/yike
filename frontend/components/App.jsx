@@ -18,6 +18,7 @@ import WBasketballIndexContainer from '../components/products/women_index/basket
 import WRunningIndexContainer from '../components/products/women_index/running_index/running_index_container';
 import WCasualIndexContainer from '../components/products/women_index/casual_index/casual_index_container';
 
+import CartItemsContainer from '../components/cart_items/cart_items_index_container';
 
 
 import Splash from './splash/home';
@@ -80,6 +81,8 @@ const App = () => (
         <Route exact path = '/womensbasketball' component={WBasketballIndexContainer} />
         <Route exact path = '/womensrunning' component={WRunningIndexContainer} />
         <Route exact path = '/womenscasual' component={WCasualIndexContainer} />
+
+        <Route exact path ='/shoppingcart' component={CartItemsContainer}/>
         
     </div>
 );

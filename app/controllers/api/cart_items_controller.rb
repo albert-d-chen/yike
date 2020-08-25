@@ -1,12 +1,17 @@
 class Api::CartItemsController < ApplicationController
     def index 
         if current_user 
-            @cart_items = current_user.cart.cart_items 
+            @cart_items = current_user.cart_items 
         else
             @cart_items = []
         end 
 
         render :index
+    end
+
+    def show 
+        @cart_item = CartItem.find(params[:id])
+        render :show
     end
 
     def create 
@@ -39,6 +44,6 @@ class Api::CartItemsController < ApplicationController
     private 
     
     def cart_item_params
-        params.require(:cart_item).permit(:cart_id, :product_id, :quantity)
+        params.require(:cartItem).permit(:user_id, :product_id, :quantity)
     end
 end

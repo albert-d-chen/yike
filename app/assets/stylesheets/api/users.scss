@@ -25,7 +25,7 @@
 .login-modal-screen {
     position: fixed;
     background: rgba(0, 0, 0, 1);
-    top: 0;
+    top: 100px;
     bottom: 0;
     left: 0;
     right: 0;
@@ -136,11 +136,12 @@
 
 .signup-modal .is-open{
     display: block;
+    position: fixed;
 }
 
 .signup-modal-form {
-    position: absolute;
-    top: 150px;
+    position: fixed;
+    top: 90px;
     left: 50%;
     margin-left: -220px;
     width: 400px;
@@ -154,7 +155,7 @@
 .signup-modal-screen {
     position: fixed;
     background: rgba(0, 0, 0, 1);
-    top: 0;
+    top: 100px;
     bottom: 0;
     left: 0;
     right: 0;

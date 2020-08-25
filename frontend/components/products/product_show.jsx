@@ -2,16 +2,23 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 
 class ProductShow extends React.Component{
-    // constructor(props) {
-    //     super(props);
-    // }
+
     constructor(props){
         super(props);
+
         this.highlightBorder = this.highlightBorder.bind(this);
+        this.addToCart = this.addToCart.bind(this);
+        this.addItem = this.addItem.bind(this);
     }
     componentDidMount(){
         this.props.getProduct(this.props.match.params.productId);
     }
+
+    // componentDidUpdate(prevProps) {
+    //     if (prevProps.match.params.productId !== this.props.match.params.productId) {
+    //         this.props.getProduct(this.props.match.params.productId);
+    //     }
+    // }
 
     renderGender(){
         const gender = (this.props.product.gender ==="Men's") ? (
@@ -25,6 +32,38 @@ class ProductShow extends React.Component{
     highlightBorder(){
         var ele = document.getElementsByClassName('product-icon');
         ele.classList.toggle('style');
+    }
+
+    addItem(newItem) {
+        this.props.createCartItem({
+            user_id: this.props.currentUserId,
+            product_id: newItem.id ,
+            quantity: 1
+        })
+    }
+
+    addToCart(e) {
+        e.preventDefault();
+        if (this.props.currentUserId) {
+            let items = [];
+            for (let i = 0; i < this.props.userCartItems.length; i++) {
+                items.push(this.props.userCartItems[i]);
+            }
+            debugger
+
+            if (Object.values(this.props.userCartItems).includes(this.props.product)) {
+                debugger
+                return (
+                    <div>Product already in shopping cart.</div>
+                )
+            } else {
+                this.addItem(this.props.product);
+            }
+        } else {
+            this.props.history.push('/login')
+        }
+
+
     }
     
     render() {
@@ -48,7 +87,7 @@ class ProductShow extends React.Component{
                             </div>
                             <div className='product-name-head'>{this.props.product.product_name}</div>
                             
-                               <div ><img onClick={this.highlightBorder} className='product-icon' src={product.photoUrls ? product.photoUrls[0] : null} ></img></div>
+                            <div ><img onClick={this.highlightBorder} className='product-icon' src={product.photoUrls ? product.photoUrls[0] : null} ></img></div>
                             
                             <div className='product-description'>"{this.props.product.description}"</div>
                             
@@ -62,8 +101,18 @@ class ProductShow extends React.Component{
                                     Style: KOBE4EVER
                                 </li>
                             </ul>
+
+
+
+                            <div className='add-item-container'>
+                                   <button onClick={this.addToCart}> <Link to='/shoppingcart'>Add To Cart</Link></button>
+
+                            </div>
                         </div>
                     </div>
+
+
+
                 </div>
             )
         }

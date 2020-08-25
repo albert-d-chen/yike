@@ -11,7 +11,7 @@
 #  color        :string           not null
 #  created_at   :datetime         not null
 #  updated_at   :datetime         not null
-#  gender       :string(1)        not null
+#  gender       :string
 #
 class Product < ApplicationRecord
     validates :product_name, :category, :description, :price, :size, :color, presence:true

@@ -11,7 +11,7 @@
 #  color        :string           not null
 #  created_at   :datetime         not null
 #  updated_at   :datetime         not null
-#  gender       :string(1)        not null
+#  gender       :string
 #
 
 # This model initially had no columns defined. If you add columns to the

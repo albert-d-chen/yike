@@ -1,5 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
+import CartItems from '../cart_items/cart_items_index_container';
 
 const navBar = ({currentUser, logout}) => {
     const display = currentUser ? (
@@ -19,6 +20,9 @@ const navBar = ({currentUser, logout}) => {
     return (
             <div className='nav-login'>
                 {display}
+                <div>
+                    <Link to='/shoppingcart'> Cart</Link>
+                </div>
             </div>
     )
 }
