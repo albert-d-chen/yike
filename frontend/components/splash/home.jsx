@@ -85,8 +85,10 @@ class Home extends React.Component {
                             In memory of Kobe Bryant.
                         </div>
                         <div className='social-icons'>
-                            <a href="https://github.com/albert-d-chen"><img src={window.images.github} className='social-icon' /></a>
-                            <a href="https://linkedin.com/in/albertdchen"><img src={window.images.linkedin} className='social-icon'/></a>
+                            
+                            <a href="https://github.com/albert-d-chen"><i className="fab fa-github fa-2x footer-icon" style={{color: 'white'}}></i></a>
+                            <a href="https://linkedin.com/in/albertdchen"><i className="fab fa-linkedin fa-2x footer-icon" style={{ color: 'white' }}></i></a>
+                            
                         </div>
                     </div>
 

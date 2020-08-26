@@ -77,6 +77,9 @@
     align-items: center;
 
 }
+// .nav-right {
+//     width: 200px;
+// }
 
 .left-nav > ul > li {
     display: flex;
@@ -132,8 +135,31 @@
     display: flex; 
     position: relative;
     padding-top: 2px;
+    right: 20px;
+    float: left;
 }
 
+.cart1{
+    position: relative;
+    display: inline-block;
+    width: 10px;
+    height: 18px;
+    padding-left: 15px;
+    top: 3px;
+    border-left: 1px solid rgba(130, 130, 130, 0.6);
+}
+
+.cart2{
+    position: relative;
+    display: inline-block;
+    width: 10px;
+    left: 200px;
+    height: 18px;
+    top: 0px;
+    border-left: 1px solid rgba(130, 130, 130, 0.6);
+    padding-left: 6px;
+    
+}
 .dropdown-content{
     display: none;
     position: absolute;

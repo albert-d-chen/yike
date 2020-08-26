@@ -57,7 +57,7 @@ class CartItems extends React.Component {
             <div className='cart-items'>
                 <div>Cart Items</div>
                 {itemsIndex.map(idx => (
-                    <div>
+                    <div key={idx}>
                         {/* {items.map(item => ( */}
                             <div>
                                 <div>{this.props.userCartItems[idx].product_name}</div>
@@ -70,7 +70,7 @@ class CartItems extends React.Component {
                 
                 ))}
                 {cartItemIds.map (id => (
-                    <div className='quantity-select'>
+                    <div className='quantity-select' key={id}>
                         <select onChange={(() => {this.handleChange(id)})} value={this.props.cartItems[id].quantity}>Quantity
                                 <option value="1">1</option>
                                 <option value="2">2</option>

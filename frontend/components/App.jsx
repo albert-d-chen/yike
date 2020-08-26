@@ -20,8 +20,11 @@ import WCasualIndexContainer from '../components/products/women_index/casual_ind
 
 import CartItemsContainer from '../components/cart_items/cart_items_index_container';
 
-
 import Splash from './splash/home';
+
+
+// import KobeContainer from '../components/kobe/kobe_container'
+// import Kobe from './kobe/kobe';
 // import SplashCarousel from './splash/splash';
 
 
@@ -33,6 +36,9 @@ const App = () => (
                     <ul>
                         <li>
                             <div className='nav-left-ele top'><Link to="/" className='nav-yike-link'>Yike</Link></div> 
+                            <div className='nav-git'><a href="https://github.com/albert-d-chen"><i className="fab fa-github fa-2x footer-icon" style={{ color: 'lightblue' }}></i></a></div>
+                            <div className='nav-linkedin'><a href="https://linkedin.com/in/albertdchen"><i className="fab fa-linkedin fa-2x footer-icon" style={{ color: 'lightblue' }}></i></a></div>
+                            {/* <div><Kobe /></div> */}
                         </li> 
                     </ul>
                 </nav>
@@ -63,6 +69,7 @@ const App = () => (
             </div>
         </div>
 
+        
         <br/>
         
         {/* <div><SplashCarousel/></div> */}
@@ -84,6 +91,7 @@ const App = () => (
 
         <Route exact path ='/shoppingcart' component={CartItemsContainer}/>
         
+        {/* <Route exactpath= '/kobe' component={KobeContainer} /> */}
     </div>
 );
 

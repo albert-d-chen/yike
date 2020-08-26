@@ -1,3 +1,23 @@
+.nav-git{
+    position: relative;
+    display: inline-block;
+    top: -23px;
+    left: 30px;
+    height: 23px;
+    border-left: 1px solid rgba(130, 130, 130, 0.6);
+    padding-left: 15px;
+}
+
+.nav-linkedin{
+    position: relative;
+    display: inline-block;
+    top: -23px;
+    left: 40px;
+    height: 23px;
+    border-left: 1px solid rgba(130, 130, 130, 0.6);
+    padding-left: 15px;
+}
+
 .home-container{
     top: 82px;
     width: 100%;

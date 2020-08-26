@@ -21,13 +21,10 @@ class ProductShow extends React.Component{
         }
     }
 
-    renderGender(){
-        const gender = (this.props.product.gender ==="Men's") ? (
-            'Men'
-        ) : (
-            'Women'
-        )
-        return gender;
+    handleBorder(){
+        event.preventDefault;
+        let updatedSize = {size: event.target.value};
+
     }
 
     highlightBorder(){
@@ -36,12 +33,12 @@ class ProductShow extends React.Component{
     }
 
     addItem(newItem) {
-        
         this.props.createCartItem({
             user_id: this.props.currentUserId,
             product_id: newItem.id ,
             quantity: 1
         })
+        this.props.history.push('/shoppingcart')
     }
 
     addToCart(e) {
@@ -55,20 +52,22 @@ class ProductShow extends React.Component{
             if (this.props.userCartItems.length === 0) {
                 this.addItem(this.props.product);
             }
-                for (let i = 0; i < this.props.userCartItems.length;i++) {
-                    if (this.props.userCartItems[i].product_id === this.props.product.id) {
-                        return (
-                            <div>Product already in shopping cart.</div>
-                        )
-                    } else {
-                        this.addItem(this.props.product);
-                        break
-                    }
-                }
+            let productIdArray = this.props.userCartItems.map(item => (
+                item.product_id
+            ))
+                // for (let i = 0; i < this.props.userCartItems.length;i++) {
+            if (!productIdArray.includes(this.props.product.id) ) {    
+                this.addItem(this.props.product);
+            } else{
+                return (
+                    alert('Product already in cart!')
+                )
+            }
+                
    
-        } else {
-            this.props.history.push('/login')
-        }
+            } else {
+                this.props.history.push('/login')
+            }
 
 
     }
@@ -109,10 +108,23 @@ class ProductShow extends React.Component{
                                 </li>
                             </ul>
 
-
+                            <form>
+                                <div><button className='size-input' type="text" value={this.props.product.size} >Men 6 / W 7.5 </button></div>
+                                <div><button className='size-input' type="text" value={this.props.product.size} >Men 6.5 W 8 </button></div>
+                                <div><button className='size-input' type="text" value={this.props.product.size} >Men 7 / W 8.5  </button></div>
+                                <div><button className='size-input' type="text" value={this.props.product.size} >Men 7.5 / W 9 </button> </div>
+                                <div><button className='size-input' type="text" value={this.props.product.size} >Men 8 / W 9.5 </button></div>
+                                <div><button className='size-input' type="text" value={this.props.product.size} >Men 8.5 / W 10</button> </div>
+                                <div><button className='size-input' type="text" value={this.props.product.size} >Men 9 / W 10.5</button> </div>
+                                <div><button className='size-input' type="text" value={this.props.product.size} >Men 9.5 / W 11 </button> </div>
+                                <div><button className='size-input' type="text" value={this.props.product.size} >Men 10 / W 11.5 </button></div>
+                                <div><button className='size-input' type="text" value={this.props.product.size} >Men 10.5 / W 12 </button></div>
+                                <div><button className='size-input' type="text" value={this.props.product.size} >Men 11 / W 12.5 </button> </div>
+                                <div><button className='size-input' type="text" value={this.props.product.size} >Men 11.5 / W 13 </button> </div>
+                            </form>
 
                             <div className='add-item-container'>
-                                   <button onClick={this.addToCart}> <Link to='/shoppingcart'>Add To Cart</Link></button>
+                                   <button onClick={this.addToCart}>Add To Cart</button>
 
                             </div>
                         </div>
