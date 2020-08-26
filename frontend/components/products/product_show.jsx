@@ -12,13 +12,14 @@ class ProductShow extends React.Component{
     }
     componentDidMount(){
         this.props.getProduct(this.props.match.params.productId);
+        this.props.fetchCartItems();
     }
 
-    // componentDidUpdate(prevProps) {
-    //     if (prevProps.match.params.productId !== this.props.match.params.productId) {
-    //         this.props.getProduct(this.props.match.params.productId);
-    //     }
-    // }
+    componentDidUpdate(prevProps) {
+        if (prevProps.match.params.productId !== this.props.match.params.productId) {
+            this.props.getProduct(this.props.match.params.productId);
+        }
+    }
 
     renderGender(){
         const gender = (this.props.product.gender ==="Men's") ? (
@@ -35,6 +36,7 @@ class ProductShow extends React.Component{
     }
 
     addItem(newItem) {
+        
         this.props.createCartItem({
             user_id: this.props.currentUserId,
             product_id: newItem.id ,
@@ -44,21 +46,26 @@ class ProductShow extends React.Component{
 
     addToCart(e) {
         e.preventDefault();
+      
         if (this.props.currentUserId) {
-            let items = [];
-            for (let i = 0; i < this.props.userCartItems.length; i++) {
-                items.push(this.props.userCartItems[i]);
-            }
-            debugger
-
-            if (Object.values(this.props.userCartItems).includes(this.props.product)) {
-                debugger
-                return (
-                    <div>Product already in shopping cart.</div>
-                )
-            } else {
+            // let items = [];
+            // for (let i = 0; i < this.props.userCartItems.length; i++) {
+            //     items.push(this.props.userCartItems[i]);
+            // }
+            if (this.props.userCartItems.length === 0) {
                 this.addItem(this.props.product);
             }
+                for (let i = 0; i < this.props.userCartItems.length;i++) {
+                    if (this.props.userCartItems[i].product_id === this.props.product.id) {
+                        return (
+                            <div>Product already in shopping cart.</div>
+                        )
+                    } else {
+                        this.addItem(this.props.product);
+                        break
+                    }
+                }
+   
         } else {
             this.props.history.push('/login')
         }

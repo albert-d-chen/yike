@@ -16,7 +16,7 @@ class Api::CartItemsController < ApplicationController
 
     def create 
         @cart_item = CartItem.new(cart_item_params)
-
+        debugger
         if @cart_item.save 
             render :show 
         else 
@@ -27,9 +27,9 @@ class Api::CartItemsController < ApplicationController
 
     def update
         @cart_item = CartItem.find_by(id: params[:id])
-
+        # debugger
         if @cart_item.update(cart_item_params)
-            render :show 
+            render :show
         else 
             render json: @cart_item.errors.full_messages, status: 422
         end

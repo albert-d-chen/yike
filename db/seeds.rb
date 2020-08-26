@@ -10,6 +10,7 @@ require 'open-uri'
 User.delete_all
 Product.delete_all
 
+
 user1 = User.create!(
     first_name: 'Albert',
     last_name: 'Chen',
