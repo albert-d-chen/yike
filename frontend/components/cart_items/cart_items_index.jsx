@@ -25,16 +25,6 @@ class CartItems extends React.Component {
         }
     }
 
-    // componentWillUnmount(){
-    //     this.props.fetchCartItems();
-    // }
-
-    // update(field) {
-    //     return (
-    //         e => this.setState({[field]: e.currentTarget.value})
-    //     )
-    // }
-
     handleChange(idx){
         event.preventDefault();
         // this.setState({['id']: idx})
@@ -53,41 +43,38 @@ class CartItems extends React.Component {
        
         let cartItemIds = Object.keys(this.props.cartItems);//these are cart item ids 
         let cartItems = Object.values(this.props.cartItems);//these are cart item objects (quantity)
+                
+        let fullProducts = cartItemIds.map(itemid => {
+                let productId = this.props.cartItems[itemid].product_id;
+                
+                return (
+                <div>
+                <div>{this.props.products[productId].product_name}</div>
+
+                <div className='quantity-select' key={itemid}>
+                    <select onChange={(() => { this.handleChange(itemid) })} value={this.props.cartItems[itemid].quantity}>Quantity
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select>
+                    <button onClick={() => { window.location.reload(false); this.props.deleteCartItem(itemid); }}>Delete Item</button>
+                </div>
+                </div>
+        )})
+        
+        
+        
         return (
             <div className='cart-items'>
                 <div>Cart Items</div>
-                {itemsIndex.map(idx => (
-                    <div key={idx}>
-                        {/* {items.map(item => ( */}
-                            <div>
-                                <div>{this.props.userCartItems[idx].product_name}</div>
-                            </div>
-                        {/* ))} */}
-
-
-                        <button onClick={() => { window.location.reload(false); this.props.deleteCartItem(idx); }}>Delete Item</button>
-                    </div>
-                
-                ))}
-                {cartItemIds.map (id => (
-                    <div className='quantity-select' key={id}>
-                        <select onChange={(() => {this.handleChange(id)})} value={this.props.cartItems[id].quantity}>Quantity
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                                <option value="5">5</option>
-                                <option value="6">6</option>
-                                <option value="7">7</option>
-                                <option value="8">8</option>
-                                <option value="9">9</option>
-                                <option value="10">10</option>
-                        </select>
-                    </div>
-
-                ))}
-
-
+                {fullProducts}
             </div>
         )
     }
@@ -108,7 +95,7 @@ class CartItems extends React.Component {
         //        </div>
     
         //    )
-        return Object.values(this.props.userCartItems).length === 0 && this.props.currentUserId !== null ? this.emptyCart() : this.inCart();
+        return (this.props.userCartItems.length === 0 && this.props.currentUserId !== null) ? this.emptyCart() : this.inCart();
     }
 }
 
