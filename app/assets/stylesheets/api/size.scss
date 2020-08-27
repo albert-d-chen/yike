@@ -2,4 +2,51 @@
     outline:none;
     background:white;
     border: 1px solid lightgrey;
+    width: 70px;
+    height: 50px;
+    border-radius: 8px;
+    cursor: pointer;
+    
+}
+
+.size-container{
+    flex-wrap: wrap;
+    display: flex;
+    position: relative;
+    width: 100%;
+    left: 8px;
+    top: 35px;
+}
+
+.size-button{
+    padding: 3px;
+    cursor: pointer;
+}
+
+.add-item-container{
+    padding-top: 70px;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    left: 8px;
+    visibility: hidden;
+}
+
+.select-size {
+    position: relative;
+    top: 30px;
+    left:10px;
+}
+
+.add-to-cart{
+    visibility: visible;
+    border:none;
+    border-radius: 50px;
+    background-color: black;
+    color: white;
+    padding: 20px;
+    padding-right: 50px;
+    padding-left: 50px;
+    width: 100%;
+    cursor: pointer;
 }

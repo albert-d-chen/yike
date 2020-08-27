@@ -40,16 +40,16 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 
 .product-price-show-mini{
-    font-size: 16px;
+    font-size: 18px;
     font-family: 'Roboto', sans-serif;
 }
 
 .product-name-head{
-    font-size: 30px;
+    font-size: 33px;
     font-family: 'Roboto', sans-serif;
     margin-bottom: 20px;
     letter-spacing: 1px;
@@ -71,7 +71,7 @@
     width: 70px;
     height: 70px;
     border: 1px solid rgba(130, 130, 130, 0.6);
-    // border: 1px solid black;
+    border: 1px solid black;
     border-radius: 3px;
     margin-bottom: 20px;
 }
@@ -81,9 +81,38 @@
     border-radius: 3px;
 }
 
+
 .product-icon style{
     width: 70px;
     height: 70px;
     border: 1px solid black;
     border-radius: 3px;
+}
+
+.size-input:focus{
+    border-color: black;
+}
+
+.size-input:hover{
+    border-color:black;
+}
+
+.add-to-cart:active{
+    outline:none;
+    border:none;
+}
+
+.add-to-cart:hover{
+    background-color: lightgray;
+}
+
+.select-size{
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+}
+
+.add-to-cart{
+    font-family: 'Baloo Tamma 2', cursive;
+    letter-spacing: 1px;
+    font-size: 14px;
 }

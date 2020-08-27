@@ -33,8 +33,8 @@ product6 = Product.create!(
     description: "When we are saying this cannot be accomplished, this cannot be done, then we are short-changing ourselves. My brain, it cannot process failure. It will not process failure.",
     price: 240,
     category: 'Casual',
-    color: 'purple',
-    size: 10,
+    color: 'Purple',
+    size: '10',
     gender: "Men's",
 )
 
@@ -52,8 +52,8 @@ product7 = Product.create!(
     description: "Winning takes precedence overall. There’s no gray area. No almosts.",
     price: 300,
     category: 'Basketball',
-    color: 'white',
-    size: 10,
+    color: 'White',
+    size: '10',
     gender: "Men's",
 )
 
@@ -71,8 +71,8 @@ product8 = Product.create!(
     description: "I don't want to be the next Michael Jordan, I only want to be Kobe Bryant.",
     price: 170,
     category: 'Running',
-    color: 'black',
-    size: 10,
+    color: 'Black',
+    size: '10',
     gender: "Men's",
 )
 
@@ -91,8 +91,8 @@ product9 = Product.create!(
     description: "I'll do whatever it takes to win games, whether it's sitting on a bench waving a towel, handing a cup of water to a teammate, or hitting the game-winning shot.",
     price: 100,
     category: 'Casual',
-    color: 'white',
-    size: 7,
+    color: 'White',
+    size: '7',
     gender: "Women's",
 )
 
@@ -110,8 +110,8 @@ product10 = Product.create!(
     description: "Everything negative - pressure, challenges - is all an opportunity for me to rise.",
     price: 150,
     category: 'Running',
-    color: 'pink',
-    size: 7,
+    color: 'Pink',
+    size: '7',
     gender: "Women's",
 )
 
@@ -129,8 +129,8 @@ product11 = Product.create!(
     description: "If you're afraid to fail, then you're probably going to fail.",
     price: 200,
     category: 'Basketball',
-    color: 'blue',
-    size: 7,
+    color: 'Blue',
+    size: '7',
     gender: "Women's",
 )
 

@@ -19,3 +19,10 @@ export const getProductsByCategory = (category) => {
     })
 }
 
+export const updateProduct = (product) => (
+    $.ajax({
+        method: 'PATCH',
+        url: `api/products/${product.id}`,
+        data: {product}
+    })
+)

@@ -37,3 +37,8 @@ export const getProductsByCategory = (category) => dispatch => (
         .then(products => (dispatch(receiveProducts(products))),
         err => dispatch(receiveProductErrors(err.responseJSON)))
 )
+
+export const updateProduct = productId => dispatch => (
+    ProdAPIUtil.updateProduct(productId)
+        .then(productId => dispatch(receiveProduct(productId)))
+)

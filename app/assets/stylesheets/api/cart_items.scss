@@ -2,20 +2,287 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.cart-container{
+.cart-items-container{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    // width:100%;
+    top: 150px;
+}
+
+.cart-left{
+    display: flex;
+    padding-right: 30px;
+    width: 600px;
+}
+
+.cart-products{
+    position: absolute;
+    top: 50px;
+    width: 600px;
+    // display: flex;
+    align-items: center;
+}
+.size-cart {
+    position: relative;
+    display: inline-block;
+}
+
+.quantity-select{
+    position: relative;
+    display: inline-block;
+    font-family: 'Baloo Tamma 2', cursive;
+    color: rgba(130, 130, 130, 1);
+}
+
+.cart-product-price{
+    position: relative;
+    display: flex;
+    width: 400px;
+    justify-content: space-between;
+    padding-bottom: 0px;
+}
+
+.cart-gender-color{
+    padding-bottom: 0px;
+}
+
+.cart-item-gender{
+    padding-bottom: 0px;
+}
+
+.cart-image{
+    width: 150px;
+    height: 150px;
+}
+
+.size-cart{
+    padding-bottom: 15px;
+    padding-right: 20px;
+    font-family: 'Baloo Tamma 2', cursive;
+    color: rgba(130, 130, 130, 1);
+}
+
+
+.cart-product-container{
+    // flex-wrap: wrap;
+    width: 100%;
+    display: inline-block;
+    position: relative;
+    height: 200px;
+    padding-top: 60px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid lightgray;
+    border-top: 1px solid lightgray;
+}
+
+
+.cart-info-wrapper{
+    position: relative;
+    left: 150px;
+    top: -150px;
+    padding-left: 15px;
+}
+
+.select-dropdown{
+    border-color: lightgray;
+    border-radius: 5px;
+}
+
+
+.cart-right{
+    width: 300px;
+}
+
+.subtotal-title{
+    display: inline-block;
+}
+
+.subtotal-price{
+    display: inline-block;
+}
+
+.subtotal{
+    display: flex;
+    justify-content: space-between;
+}
+
+.estimated-shipping{
+    display: inline-block;
+}
+
+.shipping-price{
+    display: inline-block;
+}
+
+.shipping{
+    display: flex;
+    justify-content: space-between;
+}
+.estimated-tax{
+    display: inline-block;
+}
+
+.shipping-tax{
+    display: inline-block;
+}
+
+.tax{
+    display: flex;
+    justify-content: space-between;
+}
+
+.total-header{
+    display:inline-block;
+}
+
+.total-price{
+    display:inline-block;
+}
+
+.total{
+    display: flex;
+    justify-content: space-between;
+}
+
+.cart-header{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 30px;
+}
+
+.cart-item-name{
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+}
+
+.cart-item-price{
+    font-family: 'Baloo Tamma 2', cursive;
+    color: rgba(130, 130, 130, 1);
+}
+
+.cart-gender-color{
+    font-family: 'Baloo Tamma 2', cursive;
+    color: rgba(130, 130, 130, 1);
+}
+
+.delete-button{
+    border: none;
+    background-color: white;
+    text-decoration: underline;
+    font-family: 'Baloo Tamma 2', cursive;
+    color: rgba(130, 130, 130, 1);
+    cursor: pointer;
+    font-size: 15px;
+    padding: 0px;
+}
+
+
+.summary{
+    font-family: 'Roboto', sans-serif;
+    font-size: 30px;
+    font-weight: 500;
+    padding-bottom: 15px;
+}
+
+.subtotal{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 15px;
+    padding-bottom: 15px;
+}
+
+.shipping{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 15px;
+    padding-bottom: 15px;
+}
+
+.tax{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 15px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid lightgray;
+}
+
+.total{
+    font-family: 'Pathway Gothic One', sans-serif;
+    letter-spacing: 1px;
+    font-size: 20px;
+    font-weight: 600;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.checkout{
+    padding-bottom: 15px;
+    display: flex;
+    justify-content: center;
+}
+
+.paypal{
+    padding-bottom: 30px;
+    display: flex;
+    justify-content: center;
+}
+.checkoutButton{
+    visibility: visible;
+    border:none;
+    border-radius: 50px;
+    background-color: black;
+    color: white;
+    padding: 20px;
+    padding-right: 50px;
+    padding-left: 50px;
+    width: 100%;
+    cursor: pointer;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 15px;
+    letter-spacing: 1px;
+
+}
+
+.checkoutButton:hover{
+    background-color: lightgray;
+}
+
+.checkout-paypal{
+    visibility: visible;
+    border:none;
+    border-radius: 50px;
+    background-color: lightgray;
+    color: white;
+    padding: 10px;
+    padding-right: 50px;
+    padding-left: 50px;
+    width: 100%;
+    cursor: pointer;
+}
+
+.checkout-paypal:hover{
+    background-color: darkgrey;
+}
+
+.kobe-gif{
+    position: absolute;
+    display: flex;
+    top: 70px;
+}
+
+.cart-header1{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 30px;
     display: flex;
     position: relative;
-    top: 100px;
-    
+    width: 100%;
 }
 
-.cart-items{
-    position: relative;
-    top: 100px;
-    left: 100px;
-}
-
-.cart-empty{
-    position: relative;
-    top:200px;
+.cart-left1{
+    display: flex;
+    padding-right: 30px;
+    width: 600px;
 }

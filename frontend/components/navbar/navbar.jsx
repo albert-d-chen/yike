@@ -7,7 +7,7 @@ const navBar = ({currentUser, logout}) => {
         <div className='nav-dropdown'>
             <div className='nav-logged-in'>Hi,&nbsp; {currentUser.first_name} {currentUser.last_name}
                 <div className='dropdown-content'>
-                    <div onClick={() => { logout(); window.location.reload(false);}} className='logout-dropdown'><Link to='/'>Logout</Link></div>
+                    <div onClick={() => { window.location.reload(false); logout(); }} className='logout-dropdown'><Link to='/'>Logout</Link></div>
                 </div>
               
             </div>
