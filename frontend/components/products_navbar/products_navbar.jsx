@@ -18,7 +18,7 @@ const productsNavBar = () => {
                                 <div className='prod-nav-dropdown'>
                                     <div className='prod-nav inline'><Link to='/products' className='prod-nav-link'>ALL</Link>
                                         <div className='prod-nav-dropdown-content'>
-                                            <div className='inline2'><Link to='/products' className='prod-nav-link'>Shoes</Link></div>
+                                            <div className='inline2'><Link to='/products' className='prod-nav-link1'>Shoes</Link></div>
                                         </div>
                                     </div>
                                 </div>
@@ -26,9 +26,9 @@ const productsNavBar = () => {
                                 <div className='prod-nav-dropdown'>
                                     <div className='prod-nav inline'><Link to='/men' className='prod-nav-link'>MEN</Link>
                                         <div className='prod-nav-dropdown-content'>
-                                            <div className='inline2'><Link to='/mensbasketball' className='prod-nav-link'>Basketball</Link></div>
-                                            <div className='inline2'><Link to='/mensrunning' className='prod-nav-link'>Running</Link></div>
-                                            <div className='inline2'><Link to='/menscasual' className='prod-nav-link'>Casual</Link></div>
+                                            <div className='inline2'><Link to='/mensbasketball' className='prod-nav-link1'>Basketball</Link></div>
+                                            <div className='inline2'><Link to='/mensrunning' className='prod-nav-link1'>Running</Link></div>
+                                            <div className='inline2'><Link to='/menscasual' className='prod-nav-link1'>Casual</Link></div>
                                         </div>
                                     </div>
                                 </div>
@@ -36,9 +36,9 @@ const productsNavBar = () => {
                                 <div className='prod-nav-dropdown'>
                                     <div className='prod-nav inline'><Link to='/women' className='prod-nav-link'>WOMEN</Link>
                                         <div className='prod-nav-dropdown-content'>
-                                            <div className='inline2'><Link to='/womensbasketball' className='prod-nav-link'>Basketball</Link></div>
-                                            <div className='inline2'><Link to='/womensrunning' className='prod-nav-link'>Running</Link></div>
-                                            <div className='inline2'><Link to='/womenscasual' className='prod-nav-link'>Casual</Link></div>
+                                            <div className='inline2'><Link to='/womensbasketball' className='prod-nav-link1'>Basketball</Link></div>
+                                            <div className='inline2'><Link to='/womensrunning' className='prod-nav-link1'>Running</Link></div>
+                                            <div className='inline2'><Link to='/womenscasual' className='prod-nav-link1'>Casual</Link></div>
                                         </div>
                                     </div>
                                 </div>
