@@ -41,7 +41,7 @@ In browser:
  * Shows all inventory of shoes 
  * Navigate through categories of shoes on main nav bar
  
- ![index](https://user-images.githubusercontent.com/66042755/91593320-cb70b380-e914-11ea-8213-b47e38a1e3cf.gif)
+ ![index](https://user-images.githubusercontent.com/66042755/91594387-b3019880-e916-11ea-9f8f-5d4855bb7cb0.gif)
  
 * Product Show Page 
  * Picture on index page links to the shoe show page
