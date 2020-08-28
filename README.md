@@ -2,6 +2,8 @@
 
 Yike [Yi-kee], a Nike clone, is a online Kobe shoe store that allows users to browse, purchase, and rate shoes. 
 
+[Live Demo](https://yike-mamba.herokuapp.com/#/)
+
 ### `Framework:`
 
 * Ruby 
@@ -56,7 +58,7 @@ In browser:
 
   ![show](https://user-images.githubusercontent.com/66042755/91593340-d1ff2b00-e914-11ea-829c-dd6dd74d9a23.gif)  
   
-  ```javascript
+ ```javascript
     addItem(newItem) {
         this.props.createCartItem({
             user_id: this.props.currentUserId,
@@ -89,11 +91,8 @@ In browser:
 
 
    }
-```  
-  
- 
- 
-
+   
+```
 
 * **Shopping Cart Page**
   * Shows all user's cart items 
