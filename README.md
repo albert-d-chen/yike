@@ -29,8 +29,6 @@ In terminal:
 
 In browser:
  7. `http://localhost:3000`
- 
- 
 
 ### `Features:`
 
@@ -41,5 +39,19 @@ In browser:
 
 * Product Index Page 
  * Shows all inventory of shoes 
+ * Navigate through categories of shoes on main nav bar
+ 
+ ![index](https://user-images.githubusercontent.com/66042755/91593320-cb70b380-e914-11ea-8213-b47e38a1e3cf.gif)
+ 
 * Product Show Page 
+ * Picture on index page links to the shoe show page
+ * Able to choose a size to add to the cart 
+
+![show](https://user-images.githubusercontent.com/66042755/91593340-d1ff2b00-e914-11ea-829c-dd6dd74d9a23.gif)
+
+* Shopping Cart Page
+ * Shows all user's cart items 
+ * Can adjust the quantity of each cart item and update the total price
+ 
+![cart](https://user-images.githubusercontent.com/66042755/91593353-d6c3df00-e914-11ea-8ba7-0f5580c0c22d.gif)
 
