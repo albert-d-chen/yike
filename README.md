@@ -58,6 +58,8 @@ In browser:
 
   ![show](https://user-images.githubusercontent.com/66042755/91593340-d1ff2b00-e914-11ea-829c-dd6dd74d9a23.gif)  
   
+  * Code to add a new item if it does not already exist in the cart
+  
  ```javascript
     addItem(newItem) {
         this.props.createCartItem({
