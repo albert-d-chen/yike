@@ -1,5 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
+import PopupAdded from './product_added_popup';
 
 class ProductShow extends React.Component{
 
@@ -10,6 +11,7 @@ class ProductShow extends React.Component{
         this.addToCart = this.addToCart.bind(this);
         this.addItem = this.addItem.bind(this);
     }
+
     componentDidMount(){
         this.props.getProduct(this.props.match.params.productId);
         this.props.fetchCartItems();
@@ -20,12 +22,6 @@ class ProductShow extends React.Component{
             this.props.getProduct(this.props.match.params.productId);
         }
     }
-
-
-    // highlightBorder(){
-    //     var ele = document.getElementsByClassName('product-icon');
-    //     ele.classList.toggle('style');
-    // }
 
     handleSize(idx) {
         event.preventDefault();
@@ -47,9 +43,6 @@ class ProductShow extends React.Component{
         e.preventDefault();
       
         if (this.props.currentUserId) {
-            // if (this.props.userCartItems.length === 0) {
-            //     this.addItem(this.props.product);
-            // }
             let productIdArray = this.props.userCartItems.map(item => (
                 item.product_id
             ))
@@ -132,8 +125,8 @@ class ProductShow extends React.Component{
 
                             <div className='add-item-container'>
                                    <button className='add-to-cart' onClick={this.addToCart}>Add To Cart</button>
-
                             </div>
+                     
                         </div>
                     </div>
                 </div>

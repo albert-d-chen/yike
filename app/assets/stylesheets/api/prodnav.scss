@@ -86,7 +86,7 @@
 .prod-nav:hover > .prod-nav-dropdown-content{
     display:flex;
     border:1px solid rgba(130, 130, 130, 0.6);
-    z-index: 10;
+    // z-index: 2;
     justify-content: center;
     width: 300px;
     height: 65px;

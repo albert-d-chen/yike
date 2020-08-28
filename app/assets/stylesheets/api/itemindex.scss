@@ -5,7 +5,13 @@
 }
 .image {
     height: 400px;
-    width: 434px;
+    width: 400px;
+}
+
+.image:hover{
+    transform: scale(1.07);
+    border: 1px solid black;
+    z-index: 10;
 }
 
 
@@ -72,6 +78,7 @@
     font-family: 'Roboto Condensed', sans-serif;
     margin-top: auto;
     margin-bottom: 50px;
+    margin-top: 10px;
 }
 
 .mini-header{

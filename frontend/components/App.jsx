@@ -36,9 +36,8 @@ const App = () => (
                     <ul>
                         <li>
                             <div className='nav-left-ele top'><Link to="/" className='nav-yike-link'>Yike</Link></div> 
-                            <div className='nav-git'><a href="https://github.com/albert-d-chen"><i className="fab fa-github fa-2x footer-icon" style={{ color: 'lightblue' }}></i></a></div>
-                            <div className='nav-linkedin'><a href="https://linkedin.com/in/albertdchen"><i className="fab fa-linkedin fa-2x footer-icon" style={{ color: 'lightblue' }}></i></a></div>
-                            {/* <div><Kobe /></div> */}
+                            <div className='nav-git'><a href="https://github.com/albert-d-chen" target={"_blank"}><i className="fab fa-github fa-2x footer-icon" style={{ color: 'lightblue' }}></i></a></div>
+                            <div className='nav-linkedin'><a href="https://linkedin.com/in/albertdchen" target={"_blank"}><i className="fab fa-linkedin fa-2x footer-icon" style={{ color: 'lightblue' }}></i></a></div>
                         </li> 
                     </ul>
                 </nav>
@@ -91,7 +90,6 @@ const App = () => (
 
         <Route exact path ='/shoppingcart' component={CartItemsContainer}/>
         
-        {/* <Route exactpath= '/kobe' component={KobeContainer} /> */}
     </div>
 );
 

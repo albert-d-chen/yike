@@ -42,6 +42,7 @@
     justify-content: center;
     align-items: center;
     top: 650px;
+
 }
 
 .mamba-quote1 {
@@ -113,6 +114,7 @@
 .mamba-explore {
     position: absolute;
     top: 270px;
+    left: 135px;
     border-radius: 25px;
     background: black;
     color: white;
@@ -162,6 +164,7 @@
     padding-right: 10px;
     padding-left: 10px;
     padding-top: 20px;
+     z-index: 0;
 }
 .pic-two {
     flex-grow: 1;
@@ -173,6 +176,7 @@
     padding-right: 10px;
     padding-left: 10px;
     padding-top: 20px;
+      z-index: 0;
 }
 .pic-three{
     flex-grow: 1;
@@ -184,6 +188,7 @@
     padding-right: 10px;
     padding-left: 10px;
     padding-top: 20px;
+     z-index: 0;
 }
 // .pic-three>img {
 //     width: 400px;
@@ -197,6 +202,7 @@
 .pic-image{
     width:440px;
     height:500px;
+  
 }
 
 .three-pic-container{
@@ -279,6 +285,7 @@
     width: 94%;
     height: 500px;
     background-color: gold;
+    // z-index: 0;
     // visibility: hidden;
 }
 
@@ -315,6 +322,7 @@
     padding-left: 20px;
     padding-right: 20px;
     cursor: pointer;
+    z-index: 1;
 }
 
 .joinus-explore:hover{

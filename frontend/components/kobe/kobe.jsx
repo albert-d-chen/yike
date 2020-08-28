@@ -1,16 +1,30 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import KobePopup from './kobe_popup';
 
 class Kobe extends React.Component{
+    constructor(props){
+        super(props);
+
+        this.state = {
+            showKobePopup: false
+        }
+    }
+
+    togglePopUpKobe() {
+        this.setState({
+            showKobePopup: !this.state.showKobePopup
+        })
+    }
+
     render(){
         return(
-        <div className='kobe-modal is-open'>
-            <div className='kobe-modal-form'>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/C9I-W1eTCbk" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullcreen></iframe>
+            <div>
+                <div className='checkout'><button onClick={() => { this.togglePopUpKobe() }} className='kobeButton'>Inspire Me.</button></div>
+                {this.state.showKobePopup ?
+                    <KobePopup closePopup={this.togglePopUpKobe} /> : null}
             </div>
 
-            <div className='kobe-modal-screen'></div>
-        </div>
         )
     }
 }

@@ -245,6 +245,10 @@
 
 }
 
+.checkoutButton:focus{
+    outline:0;
+}
+
 .checkoutButton:hover{
     background-color: lightgray;
 }
@@ -262,6 +266,9 @@
     cursor: pointer;
 }
 
+.checkout-paypal:focus{
+    outline:0;
+}
 .checkout-paypal:hover{
     background-color: darkgrey;
 }

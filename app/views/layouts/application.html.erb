@@ -5,6 +5,7 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
+    <%= favicon_link_tag asset_path('Kobe-Bryant-Logo.jpg')%>
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
     <script type="text/javascript">
@@ -22,6 +23,7 @@
         linkedin: "<%= image_url('linkedin.jpg')%>",
         slide1: "<%= image_url('mambayellowmine.png')%>",
         slide2: "<%= image_url('kobead.jpg')%>",
+        favicon: "<%= image_url('favicon.ico')%>"
 
       }
     </script>

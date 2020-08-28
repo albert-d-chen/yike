@@ -102,6 +102,11 @@
     border:none;
 }
 
+.add-to-cart:focus{
+    outline: none;
+    border: none;
+}
+
 .add-to-cart:hover{
     background-color: lightgray;
 }

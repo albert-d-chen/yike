@@ -1,0 +1,171 @@
+.popup {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  background-color: rgba(0,0,0, 0.5);
+}
+.popup_inner {
+  position: absolute;
+  left: 25%;
+  right: 25%;
+  top: 40%;
+  bottom: 25%;
+  height: 400px;
+  width: 600px;
+  margin: auto;
+  border: 1px solid lightgrey;
+  border-radius: 10px;
+  background: white;
+}
+
+.popup-header{
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;
+    padding-bottom: 5px;
+    font-family: 'Pathway Gothic One', sans-serif;
+    letter-spacing: 1px;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.popup-gif{
+    display:flex;
+    justify-content: center;
+}
+
+.popup-close{
+    display: flex;
+    justify-content: center;
+}
+
+.popup-button{
+    border:none;
+    border-radius: 50px;
+    background-color: black;
+    color: white;
+    padding: 20px;
+    padding-right: 50px;
+    padding-left: 50px;
+    width: 40%;
+    cursor: pointer;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 15px;
+    letter-spacing: 1px;
+}
+
+.popup-button:hover{
+    background-color: lightgrey;
+}
+
+.continue-yeeting{
+    text-decoration: none;
+    cursor: pointer;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 15px;
+    letter-spacing: 1px;
+    color: white;
+}
+
+
+.kobepopup {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  background-color: rgba(0,0,0, 0.5);
+}
+.kobepopup_inner {
+  position: fixed;
+  top: 55%;
+  bottom: 25%;
+  height: 100%;
+  width: 100%;
+  margin: auto;
+  border-radius: 10px;
+  background: black;
+  z-index: 9999999;
+}
+
+.kobe-popup-button{
+    border:1px solid lightgray;
+    border-radius: 50px;
+    background-color: black;
+    color: white;
+    padding: 20px;
+    padding-right: 25px;
+    padding-left: 25px;
+    width: 35%;
+    cursor: pointer;
+    font-family: 'Raleway', sans-serif;
+    letter-spacing: 1px;
+    z-index: 100;
+}
+
+.kobe-popup-button:active{
+    outline: 0;
+    border: none;
+}
+.kobe-popup-button:hover{
+   background: rgba(100, 100, 100, .7);
+    color: black;
+}
+
+.kobe-popup-close{
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+    visibility: visible;
+    z-index: 101;
+}
+
+.mamba-inspire {
+    position: absolute;
+    top: 255px;
+    left: 235px;
+    border-radius: 25px;
+    color: white;
+    padding: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
+    cursor: pointer;
+}
+
+.kobeButton{
+    visibility: visible;
+    border:none;
+    border-radius: 50px;
+    background-color: black;
+    color: white;
+    padding: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    width: 100%;
+    cursor: pointer;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 300;
+    font-size: 15px;
+    letter-spacing: 1px;
+
+}
+
+.kobeButton:focus{
+    outline:0;
+}
+
+.kobeButton:hover{
+   background: rgba(100, 100, 100, .7);
+}

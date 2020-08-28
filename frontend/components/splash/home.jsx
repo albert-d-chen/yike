@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {Link} from 'react-router-dom';
-
+import Kobe from '../kobe/kobe'
 
 class Home extends React.Component {
     
@@ -30,12 +30,13 @@ class Home extends React.Component {
                         <div className='mamba-kobe'>Kobe Bryant</div>
                         <div className='mamba-explore'>
                             <Link to='/products' className='explore-link'>
-                                    Explore
+                                    Explore.
                             </Link>
                         </div>
+                        <div className='mamba-inspire'>
+                            <div><Kobe /></div>
+                        </div>
                     </div>
-
-
 
                     <div className='three-pic-container'>
                         <div className='three-pic-header'>
@@ -86,8 +87,8 @@ class Home extends React.Component {
                         </div>
                         <div className='social-icons'>
                             
-                            <a href="https://github.com/albert-d-chen"><i className="fab fa-github fa-2x footer-icon" style={{color: 'white'}}></i></a>
-                            <a href="https://linkedin.com/in/albertdchen"><i className="fab fa-linkedin fa-2x footer-icon" style={{ color: 'white' }}></i></a>
+                            <a href="https://github.com/albert-d-chen" target={"_blank"}><i className="fab fa-github fa-2x footer-icon" style={{color: 'white'}}></i></a>
+                            <a href="https://linkedin.com/in/albertdchen" target={"_blank"}><i className="fab fa-linkedin fa-2x footer-icon" style={{ color: 'white' }}></i></a>
                             
                         </div>
                     </div>
