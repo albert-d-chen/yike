@@ -39,7 +39,24 @@ In browser:
  ![demo](https://user-images.githubusercontent.com/66042755/91590183-cc531680-e90f-11ea-9b42-4c6b12eabab8.gif)
 
 
-```javascript
+
+* **Product Index Page** 
+  * Shows all inventory of shoes 
+  * Navigate through categories of shoes on main nav bar  
+  <br/>
+ 
+   ![index](https://user-images.githubusercontent.com/66042755/91594387-b3019880-e916-11ea-9f8f-5d4855bb7cb0.gif)  
+ 
+ 
+ 
+* **Product Show Page**
+  * Picture on index page links to the shoe show page
+  * Able to choose a size to add to the cart   
+
+
+  ![show](https://user-images.githubusercontent.com/66042755/91593340-d1ff2b00-e914-11ea-829c-dd6dd74d9a23.gif)  
+  
+  ```javascript
     addItem(newItem) {
         this.props.createCartItem({
             user_id: this.props.currentUserId,
@@ -74,23 +91,8 @@ In browser:
    }
 ```  
   
-
-* **Product Index Page** 
-  * Shows all inventory of shoes 
-  * Navigate through categories of shoes on main nav bar  
-  <br/>
- 
-   ![index](https://user-images.githubusercontent.com/66042755/91594387-b3019880-e916-11ea-9f8f-5d4855bb7cb0.gif)  
  
  
- 
-* **Product Show Page**
-  * Picture on index page links to the shoe show page
-  * Able to choose a size to add to the cart   
-
-
-  ![show](https://user-images.githubusercontent.com/66042755/91593340-d1ff2b00-e914-11ea-829c-dd6dd74d9a23.gif)  
-
 
 
 * **Shopping Cart Page**
