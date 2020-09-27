@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import SearchBar from '../search/search_container'
 
 const productsNavBar = () => {
     return (
@@ -41,6 +42,10 @@ const productsNavBar = () => {
                                             <div className='inline2'><Link to='/womenscasual' className='prod-nav-link1'>Casual</Link></div>
                                         </div>
                                     </div>
+                                </div>
+
+                                <div>
+                                    <SearchBar/>
                                 </div>
                             </div>
                 </nav>

@@ -23,6 +23,7 @@ class ProductShow extends React.Component{
         }
     }
 
+
     handleSize(idx) {
         event.preventDefault();
         let updatedSize = {id: idx, size: event.target.value};
