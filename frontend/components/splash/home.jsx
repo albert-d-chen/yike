@@ -4,7 +4,6 @@ import {Link} from 'react-router-dom';
 import Kobe from '../kobe/kobe'
 
 class Home extends React.Component {
-    
     render () {
         return (
             <div>
