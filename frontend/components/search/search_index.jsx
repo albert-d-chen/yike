@@ -52,19 +52,28 @@ class SearchProducts extends React.Component{
             if (this.state.search.length === 0) {
                 return false;
             }
+            // if (product.category.toLowerCase().indexOf(this.state.search.toLowerCase()) !== -1) {
+            //     return true;
+            // }
            if (product.product_name.toLowerCase().indexOf(this.state.search.toLowerCase()) !== -1) {
                return true;
            }
+
            
         })
         filteredItems = filteredItems.slice(0, 5);
-
         let filtered;
         if (this.state.search.length === 0) {
             filtered = this.state.defaultSearch.map((item, idx) => {
                 return (
                     <div key={idx}>
-                        {item}
+                        {item === "Men's Basketball Shoes" ? <Link to={`/mensbasketball`}>{item}</Link> 
+                        : item === "Men's Running Shoes" ? <Link to={`/mensrunning`}>{item}</Link>
+                        : item === "Men's Casual Shoes" ? <Link to={`/menscasual`}>{item}</Link>
+                        : item === "Women's Basketball Shoes" ? <Link to={`/womensbasektball`}>{item}</Link>
+                        : item === "Women's Running Shoes" ? <Link to={`/womensrunning`}>{item}</Link>
+                        :  <Link to={`/womenscasual`}>{item}</Link>}
+                        {/* {item} */}
                     </div>
                 )
             })
