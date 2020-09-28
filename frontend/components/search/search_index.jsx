@@ -5,15 +5,29 @@ class SearchProducts extends React.Component{
     constructor(props) {
         super(props);
         this.state = {
-            search: ''
+            search: '',
+            showDropdown: false,
+            defaultSearch: [
+                "Men's Shoes",
+                "Women's Shoes",
+                "Basketball Shoes",
+                "Running Shoes",
+                "Casual Shoes"
+            ]
         }
+
+        this.openDropdown = this.openDropdown.bind(this);
+        this.closeDropdown = this.closeDropdown.bind(this);
     }
 
     componentDidMount(){
         this.props.getProducts();
     }
-    // componentWillUpdate() {
-    //     this.props.getProducts();
+    // componentDidUpdate() {
+    //     if (this.props.products.length === 1) {
+    //         this.props.getProducts();
+    //         this.state.search = '';
+    //     }
     // }
 
     handleInput(){
@@ -52,13 +66,27 @@ class SearchProducts extends React.Component{
         return filtered;
     }
 
+    openDropdown() {
+        this.setState({showDropdown: true}, () => {
+            document.addEventListener('click', this.closeDropdown);
+        })
+    }
+
+    closeDropdown() {
+        this.setState({showDropdown:false}, () => {
+            document.removeEventListener('click', this.closeDropdown);
+        })
+    }
+
     render() {
         return (
             <div>
-                <input type="text" onChange={this.handleInput()}></input>
-                <ul>
-                    {this.checkFiltered()}
-                </ul>
+                <form action="">
+                    <input type="text" onChange={this.handleInput()} onClick={this.openDropdown} placeholder='Search'></input>
+                    <ul>
+                        {this.state.showDropdown ? this.checkFiltered() : null}
+                    </ul>
+                </form>
             </div>
         )
     }
