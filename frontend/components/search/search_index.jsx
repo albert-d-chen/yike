@@ -52,16 +52,21 @@ class SearchProducts extends React.Component{
             if (this.state.search.length === 0) {
                 return false;
             }
-            // if (product.category.toLowerCase().indexOf(this.state.search.toLowerCase()) !== -1) {
-            //     return true;
-            // }
+
            if (product.product_name.toLowerCase().indexOf(this.state.search.toLowerCase()) !== -1) {
                return true;
            }
-
-           
         })
-        filteredItems = filteredItems.slice(0, 5);
+        let reversed = this.state.defaultSearch.slice().reverse();
+
+        reversed.forEach(category => {
+            if (category.toLowerCase().indexOf(this.state.search.toLowerCase()) !== -1) {
+                filteredItems.unshift(category);
+
+            }
+        })
+// debugger
+        filteredItems = filteredItems.slice(0, 6);
         let filtered;
         if (this.state.search.length === 0) {
             filtered = this.state.defaultSearch.map((item, idx) => {
@@ -80,13 +85,24 @@ class SearchProducts extends React.Component{
             // return null;
         } else {
             filtered = (
-                filteredItems.map(product => {
+                filteredItems.map((product, idx) => {
+
                     return (
-                      <div key={product.id}>
-                        {/* <SearchItem product={product} state={this.state}/> */}
-                        <Link to={`/products/${product.id}`} onClick={this.clearInput}>
+                      <div key={idx}>
+                          {typeof product === 'string' && product === "Men's Basketball Shoes" ? <Link to={`/mensbasketball`}>{product}</Link> 
+                          : typeof product === 'string' && product === "Men's Running Shoes" ? <Link to={`/mensrunning`}>{product}</Link>
+                          : typeof product === 'string' && product === "Men's Casual Shoes" ? <Link to={`/menscasual`}>{product}</Link>
+                          : typeof product === 'string' && product === "Women's Basketball Shoes" ? <Link to={`/womensbasketball`}>{product}</Link>
+                          : typeof product === 'string' && product === "Women's Running Shoes" ? <Link to={`/womensrunning`}>{product}</Link>
+                          : typeof product === 'string' && product === "Women's Casual Shoes" ? <Link to={`/womenscasual`}>{product}</Link>
+                          : <Link to={`/products/${product.id}`} onClick={this.clearInput}>{product.product_name}</Link>}
+
+                        {/* <Link to={`/products/${product.id}`} onClick={this.clearInput}>
                           {product.product_name}
-                        </Link>
+                        </Link> */}
+
+                        {/* <SearchItem product={product} state={this.state}/> */}
+                       
                       </div>
                     );
                 })
