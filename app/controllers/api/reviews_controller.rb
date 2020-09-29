@@ -1,6 +1,7 @@
 class Api::ReviewsController < ApplicationController
     def index
         if current_user
+            @user = current_user
             @reviews = current_user.reviews
         else
             @reviews = []
