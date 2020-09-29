@@ -7,11 +7,11 @@
 #  description  :text             not null
 #  category     :string           not null
 #  price        :float            not null
-#  size         :integer          not null
 #  color        :string           not null
 #  created_at   :datetime         not null
 #  updated_at   :datetime         not null
 #  gender       :string
+#  size         :string
 #
 class Product < ApplicationRecord
     validates :product_name, :category, :description, :price, :size, :color, presence:true
@@ -23,4 +23,8 @@ class Product < ApplicationRecord
     has_many :cart_items,
         foreign_key: :product_id,
         class_name: :CartItem
+    
+    has_many :reviews,
+        foreign_key: :product_id,
+        class_name: :Review
 end

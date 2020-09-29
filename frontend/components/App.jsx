@@ -59,8 +59,8 @@ const App = () => (
                         <div className='border-caption1'>JUST&nbsp;</div> 
                         <div className='test'>
                             <div className='border-caption3'>YEET</div>
-                            <div className='border-caption4'>EAT</div>
-                            <div className='border-caption5'>CODE</div>
+                            <div className='border-caption4'>YEET</div>
+                            <div className='border-caption5'>YEET</div>
                         </div>
                         <div className='border-caption2'>&nbsp;IT.</div>
                 </div>
