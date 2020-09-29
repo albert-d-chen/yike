@@ -21,7 +21,7 @@
 .nav-center-ele {
     display: flex;
     justify-content: center;
-    margin-left: 170px;
+    margin-left: 200px;
 }
 .main-nav > .nav-center-prod{
     display: flex;
@@ -167,8 +167,48 @@
 
 .search-dropdown{
     position:absolute;
-    width: 200px;
+    width: 180px;
     height: auto;
     background-color:white;
-    // border: 1px solid lightgray;
+    border-radius: 10px;
+    top: 23px;
+    border: 1px solid lightgray;
+}
+
+.search-default{
+    position: relative;
+    justify-content: center;
+    right: 25px;
+    padding: 10px;
+    // border-right: 1px solid black;
+    // border-left: 1px solid black;
+}
+
+.search-link{
+    text-decoration: none;
+    font-family: 'Raleway', sans-serif;
+    color: black;
+    font-size: 12px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid lightgray;
+}
+
+.last-search-link {
+    text-decoration: none;
+    font-family: 'Raleway', sans-serif;
+    color: black;
+    font-size: 12px;
+    padding-bottom: 10px;
+}
+
+.search-link:visited{
+    color: black;
+}
+
+.search-link:hover{
+    color: rgb(199, 199, 199);
+}
+
+.last-search-link:hover{
+    color: rgb(199, 199, 199);
 }

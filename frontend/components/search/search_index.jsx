@@ -50,14 +50,15 @@ class SearchProducts extends React.Component{
         let filtered;
         if (this.state.search.length === 0) {
             filtered = this.state.defaultSearch.map((item, idx) => {
+                let filterClass = this.state.defaultSearch.indexOf(item) !== 5 ? 'search-link' : 'last-search-link' ;
                 return (
-                    <div key={idx}>
-                        {item === "Men's Basketball Shoes" ? <Link to={`/mensbasketball`}>{item}</Link> 
-                        : item === "Men's Running Shoes" ? <Link to={`/mensrunning`}>{item}</Link>
-                        : item === "Men's Casual Shoes" ? <Link to={`/menscasual`}>{item}</Link>
-                        : item === "Women's Basketball Shoes" ? <Link to={`/womensbasketball`}>{item}</Link>
-                        : item === "Women's Running Shoes" ? <Link to={`/womensrunning`}>{item}</Link>
-                        :  <Link to={`/womenscasual`}>{item}</Link>}
+                    <div key={idx} className='search-default'>
+                        {item === "Men's Basketball Shoes" ? <Link to={`/mensbasketball`} className={filterClass}>{item}</Link> 
+                        : item === "Men's Running Shoes" ? <Link to={`/mensrunning`} className={filterClass}>{item}</Link>
+                        : item === "Men's Casual Shoes" ? <Link to={`/menscasual`} className={filterClass}>{item}</Link>
+                        : item === "Women's Basketball Shoes" ? <Link to={`/womensbasketball`} className={filterClass}>{item}</Link>
+                        : item === "Women's Running Shoes" ? <Link to={`/womensrunning`} className={filterClass}>{item}</Link>
+                        :  <Link to={`/womenscasual`} className={filterClass}>{item}</Link>}
                     </div>
                 )
             })
@@ -157,12 +158,14 @@ class SearchProducts extends React.Component{
 
     render() {
 
+        const dropdownStyle = this.state.showDropdown ? 'search-dropdown'  : '';
+
         return (
             <div className='search-bar-container'>
                 <form id='test' onSubmit={this.handleSubmit}>
                     <i className="fas fa-search search-image"></i>
                     <input type="text" onChange={this.handleInput()} onClick={this.openDropdown} value={this.state.search} className='search-input'></input>
-                    <ul className='search-dropdown'>
+                    <ul className={dropdownStyle}>
                         {this.state.showDropdown ? this.checkFiltered() : null}
                     </ul>
                 </form>
