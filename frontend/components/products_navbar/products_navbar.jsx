@@ -44,10 +44,10 @@ const productsNavBar = () => {
                                     </div>
                                 </div>
 
-                                <div>
-                                    <SearchBar/>
-                                </div>
                             </div>
+                </nav>
+                <nav className='nav-right-prod'>
+                    <SearchBar/>
                 </nav>
         </div>
 

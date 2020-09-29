@@ -21,7 +21,7 @@
 .nav-center-ele {
     display: flex;
     justify-content: center;
-    margin-left: -15px;
+    margin-left: 170px;
 }
 .main-nav > .nav-center-prod{
     display: flex;
@@ -129,4 +129,46 @@
 
 .prod-nav{
     padding-right: 20px;
+}
+
+
+.nav-right-prod{
+    display: flex;
+    justify-content: right;
+    position: relative;
+}
+
+.search-bar-container{
+    position: relative;
+    top: 15px;
+    right: 50px;
+}
+
+.search-input{
+    border-radius: 40px;
+    outline: none;
+    border: 1px solid lightgray;
+    // padding: 3px;
+    background-color: rgb(245, 245, 245);
+    padding-left: 40px;
+    padding-top: 5px;
+    padding-bottom: 3px;
+    padding-right: 5px;
+    font-family: 'Baloo Tamma 2', cursive;
+     color: rgb(211, 208, 208); 
+     font-size: 17px;
+}
+
+.search-image {
+    position: absolute;
+    left: 15px;
+    top: 10px;
+}
+
+.search-dropdown{
+    position:absolute;
+    width: 200px;
+    height: auto;
+    background-color:white;
+    // border: 1px solid lightgray;
 }

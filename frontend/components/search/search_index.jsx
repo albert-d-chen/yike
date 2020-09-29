@@ -44,9 +44,7 @@ class SearchProducts extends React.Component{
         this.setState({search: 'Search'})
     }
 
-    checkFiltered() {
-        const { products } = this.props;
-        
+    checkFiltered() {        
         let filteredItems = this.availableSearches();
 
         let filtered;
@@ -160,11 +158,11 @@ class SearchProducts extends React.Component{
     render() {
 
         return (
-            <div>
+            <div className='search-bar-container'>
                 <form id='test' onSubmit={this.handleSubmit}>
-                    <i className="fas fa-search"></i>
-                    <input type="text" onChange={this.handleInput()} onClick={this.openDropdown} value={this.state.search}></input>
-                    <ul>
+                    <i className="fas fa-search search-image"></i>
+                    <input type="text" onChange={this.handleInput()} onClick={this.openDropdown} value={this.state.search} className='search-input'></input>
+                    <ul className='search-dropdown'>
                         {this.state.showDropdown ? this.checkFiltered() : null}
                     </ul>
                 </form>
