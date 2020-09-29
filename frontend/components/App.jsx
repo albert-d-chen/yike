@@ -25,7 +25,7 @@ import Splash from './splash/home';
 
 // import KobeContainer from '../components/kobe/kobe_container'
 // import Kobe from './kobe/kobe';
-// import SplashCarousel from './splash/splash';
+import SplashCarousel from './splash/splash';
 
 
 const App = () => (

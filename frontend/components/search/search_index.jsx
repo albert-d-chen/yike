@@ -48,25 +48,8 @@ class SearchProducts extends React.Component{
     checkFiltered() {
         const { products } = this.props;
         
-        let filteredItems = products.filter(product => {
-            if (this.state.search.length === 0) {
-                return false;
-            }
-
-           if (product.product_name.toLowerCase().indexOf(this.state.search.toLowerCase()) !== -1) {
-               return true;
-           }
-        })
-        let reversed = this.state.defaultSearch.slice().reverse();
-
-        reversed.forEach(category => {
-            if (category.toLowerCase().indexOf(this.state.search.toLowerCase()) !== -1) {
-                filteredItems.unshift(category);
-
-            }
-        })
+        let filteredItems = this.availableSearches();
 // debugger
-        filteredItems = filteredItems.slice(0, 6);
         let filtered;
         if (this.state.search.length === 0) {
             filtered = this.state.defaultSearch.map((item, idx) => {

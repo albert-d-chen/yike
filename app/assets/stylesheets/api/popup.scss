@@ -163,7 +163,11 @@
 }
 
 .kobeButton:focus{
-    outline:0;
+    outline:none;
+}
+
+.kobeButton:active{
+    outline:none;
 }
 
 .kobeButton:hover{
