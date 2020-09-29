@@ -78,7 +78,6 @@ class SearchProducts extends React.Component{
                         : item === "Women's Basketball Shoes" ? <Link to={`/womensbasektball`}>{item}</Link>
                         : item === "Women's Running Shoes" ? <Link to={`/womensrunning`}>{item}</Link>
                         :  <Link to={`/womenscasual`}>{item}</Link>}
-                        {/* {item} */}
                     </div>
                 )
             })
@@ -111,6 +110,31 @@ class SearchProducts extends React.Component{
         return filtered;
     }
 
+    availableSearches () {
+         const { products } = this.props;
+        
+        let filteredItems = products.filter(product => {
+            if (this.state.search.length === 0) {
+                return false;
+            }
+
+           if (product.product_name.toLowerCase().indexOf(this.state.search.toLowerCase()) !== -1) {
+               return true;
+           }
+        })
+        let reversed = this.state.defaultSearch.slice().reverse();
+
+        reversed.forEach(category => {
+            if (category.toLowerCase().indexOf(this.state.search.toLowerCase()) !== -1) {
+                filteredItems.unshift(category);
+
+            }
+        })
+
+        filteredItems = filteredItems.slice(0, 6);
+        return filteredItems;
+    }
+
     openDropdown() {
         this.setState({showDropdown: true}, () => {
             document.addEventListener('click', this.closeDropdown);
@@ -131,14 +155,37 @@ class SearchProducts extends React.Component{
 
     handleSubmit(e) {
         e.preventDefault();
-
-    }
+        let filtered = this.availableSearches();
+        if (filtered.length > 0) {
+            let searchFocus = filtered[0];
+            if (typeof searchFocus === 'string') {
+                 this.setState({search: searchFocus, showDropdown: false}, () => {
+                    if (searchFocus === "Men's Basketball Shoes") {
+                        this.props.history.push(`/mensbasketball`)
+                    } else if (searchFocus === "Men's Running Shoes") {
+                        this.props.history.push(`/mensrunning`)
+                    } else if (searchFocus === "Men's Casual Shoes") {
+                        this.props.history.push(`/menscasual`);
+                    } else if (searchFocus === "Women's Basketball Shoes") {
+                        this.props.history.push(`/womensbasketball`);
+                    } else if (searchFocus === "Women's Running Shoes") {
+                        this.props.history.push(`/womensrunning`);
+                    } else {
+                        this.props.history.push(`/womenscasual`);
+                    }
+            })
+        } else {
+            this.setState({search: searchFocus.product_name, showDropdown:false}, () => {
+                this.props.history.push(`/products/${searchFocus.id}`)
+            })
+        }
+    }}
 
     render() {
 
         return (
             <div>
-                <form id='test' action="">
+                <form id='test' onSubmit={this.handleSubmit}>
                     <i className="fas fa-search"></i>
                     <input type="text" onChange={this.handleInput()} onClick={this.openDropdown} value={this.state.search}></input>
                     <ul>
