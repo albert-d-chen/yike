@@ -75,7 +75,7 @@ class SearchProducts extends React.Component{
                         {item === "Men's Basketball Shoes" ? <Link to={`/mensbasketball`}>{item}</Link> 
                         : item === "Men's Running Shoes" ? <Link to={`/mensrunning`}>{item}</Link>
                         : item === "Men's Casual Shoes" ? <Link to={`/menscasual`}>{item}</Link>
-                        : item === "Women's Basketball Shoes" ? <Link to={`/womensbasektball`}>{item}</Link>
+                        : item === "Women's Basketball Shoes" ? <Link to={`/womensbasketball`}>{item}</Link>
                         : item === "Women's Running Shoes" ? <Link to={`/womensrunning`}>{item}</Link>
                         :  <Link to={`/womenscasual`}>{item}</Link>}
                     </div>
@@ -159,7 +159,7 @@ class SearchProducts extends React.Component{
         if (filtered.length > 0) {
             let searchFocus = filtered[0];
             if (typeof searchFocus === 'string') {
-                 this.setState({search: searchFocus, showDropdown: false}, () => {
+                 this.setState({search: '', showDropdown: false}, () => {
                     if (searchFocus === "Men's Basketball Shoes") {
                         this.props.history.push(`/mensbasketball`)
                     } else if (searchFocus === "Men's Running Shoes") {
@@ -175,7 +175,7 @@ class SearchProducts extends React.Component{
                     }
             })
         } else {
-            this.setState({search: searchFocus.product_name, showDropdown:false}, () => {
+            this.setState({search: '', showDropdown:false}, () => {
                 this.props.history.push(`/products/${searchFocus.id}`)
             })
         }
