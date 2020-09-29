@@ -31,7 +31,6 @@ class SearchProducts extends React.Component{
     componentDidUpdate() {
         if (this.props.products.length === 1) {
             this.props.getProducts();
-            // this.state.search = '';
         }
     }
 
@@ -49,7 +48,7 @@ class SearchProducts extends React.Component{
         const { products } = this.props;
         
         let filteredItems = this.availableSearches();
-// debugger
+
         let filtered;
         if (this.state.search.length === 0) {
             filtered = this.state.defaultSearch.map((item, idx) => {
@@ -78,12 +77,6 @@ class SearchProducts extends React.Component{
                           : typeof product === 'string' && product === "Women's Running Shoes" ? <Link to={`/womensrunning`}>{product}</Link>
                           : typeof product === 'string' && product === "Women's Casual Shoes" ? <Link to={`/womenscasual`}>{product}</Link>
                           : <Link to={`/products/${product.id}`} onClick={this.clearInput}>{product.product_name}</Link>}
-
-                        {/* <Link to={`/products/${product.id}`} onClick={this.clearInput}>
-                          {product.product_name}
-                        </Link> */}
-
-                        {/* <SearchItem product={product} state={this.state}/> */}
                        
                       </div>
                     );
