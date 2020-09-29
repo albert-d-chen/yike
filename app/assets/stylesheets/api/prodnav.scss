@@ -117,9 +117,9 @@
     text-decoration: none;
 }
 
-.inline2:hover{
-    font-style: italic;
-}
+// .inline2:hover{
+//     font-style: italic;
+// }
 
 .inline2{
     padding-right: 20px;
@@ -157,6 +157,22 @@
     font-family: 'Baloo Tamma 2', cursive;
      color: rgb(211, 208, 208); 
      font-size: 17px;
+}
+
+.search-input-user{
+    border-radius: 40px;
+    outline: none;
+    border: 1px solid lightgray;
+    // padding: 3px;
+    background-color: rgb(245, 245, 245);
+    padding-left: 40px;
+    padding-top: 5px;
+    padding-bottom: 3px;
+    padding-right: 5px;
+    font-family: 'Baloo Tamma 2', cursive;
+     color: black;
+     font-size: 17px;
+     caret-color: rgb(211, 208, 208); 
 }
 
 .search-image {

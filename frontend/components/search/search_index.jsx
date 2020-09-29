@@ -169,12 +169,13 @@ class SearchProducts extends React.Component{
     render() {
 
         const dropdownStyle = this.state.showDropdown ? 'search-dropdown'  : '';
+        const inputStyle = this.state.defaultText === this.state.search ? 'search-input' : 'search-input-user'
 
         return (
             <div className='search-bar-container'>
                 <form id='test' onSubmit={this.handleSubmit}>
                     <i className="fas fa-search search-image"></i>
-                    <input type="text" onChange={this.handleInput()} onClick={this.openDropdown} value={this.state.search} className='search-input'></input>
+                    <input type="text" onChange={this.handleInput()} onClick={this.openDropdown} value={this.state.search} className={inputStyle}></input>
                     <ul className={dropdownStyle}>
                         {this.state.showDropdown ? this.checkFiltered() : null}
                     </ul>
