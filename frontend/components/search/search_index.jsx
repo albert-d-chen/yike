@@ -50,7 +50,9 @@ class SearchProducts extends React.Component{
         let filtered;
         if (this.state.search.length === 0) {
             filtered = this.state.defaultSearch.map((item, idx) => {
-                let filterClass = this.state.defaultSearch.indexOf(item) !== 5 ? 'search-link' : 'last-search-link' ;
+                let filterClass = this.state.defaultSearch.indexOf(item) !== 5 ? 'search-link' 
+                                  : this.state.defaultSearch.indexOf(item) === 0 ? 'first-search-link'
+                                  : 'last-search-link' ;
                 return (
                     <div key={idx} className='search-default'>
                         {item === "Men's Basketball Shoes" ? <Link to={`/mensbasketball`} className={filterClass}>{item}</Link> 
@@ -63,19 +65,27 @@ class SearchProducts extends React.Component{
                 )
             })
             // return null;
+        } else if (filteredItems.length === 0) {
+            return (
+              <div className='search-default'>
+                <Link to='/products' className='first-search-link' onClick={this.clearInput}>No Results Found...</Link>
+              </div>
+            );
         } else {
             filtered = (
                 filteredItems.map((product, idx) => {
-
+                    let filterClass = filteredItems.indexOf(product) !== filteredItems.length - 1 ? 'search-link' 
+                                    : filteredItems.indexOf(product) === 0 ? 'first-search-link' 
+                                    : 'last-search-link' ;
                     return (
-                      <div key={idx}>
-                          {typeof product === 'string' && product === "Men's Basketball Shoes" ? <Link to={`/mensbasketball`}>{product}</Link> 
-                          : typeof product === 'string' && product === "Men's Running Shoes" ? <Link to={`/mensrunning`}>{product}</Link>
-                          : typeof product === 'string' && product === "Men's Casual Shoes" ? <Link to={`/menscasual`}>{product}</Link>
-                          : typeof product === 'string' && product === "Women's Basketball Shoes" ? <Link to={`/womensbasketball`}>{product}</Link>
-                          : typeof product === 'string' && product === "Women's Running Shoes" ? <Link to={`/womensrunning`}>{product}</Link>
-                          : typeof product === 'string' && product === "Women's Casual Shoes" ? <Link to={`/womenscasual`}>{product}</Link>
-                          : <Link to={`/products/${product.id}`} onClick={this.clearInput}>{product.product_name}</Link>}
+                      <div key={idx} className='search-default'>
+                          {typeof product === 'string' && product === "Men's Basketball Shoes" ? <Link to={`/mensbasketball`} className={filterClass}>{product}</Link> 
+                          : typeof product === 'string' && product === "Men's Running Shoes" ? <Link to={`/mensrunning`} className={filterClass}>{product}</Link>
+                          : typeof product === 'string' && product === "Men's Casual Shoes" ? <Link to={`/menscasual`} className={filterClass}>{product}</Link>
+                          : typeof product === 'string' && product === "Women's Basketball Shoes" ? <Link to={`/womensbasketball`} className={filterClass}>{product}</Link>
+                          : typeof product === 'string' && product === "Women's Running Shoes" ? <Link to={`/womensrunning`} className={filterClass}>{product}</Link>
+                          : typeof product === 'string' && product === "Women's Casual Shoes" ? <Link to={`/womenscasual`} className={filterClass}>{product}</Link>
+                          : <Link to={`/products/${product.id}`} onClick={this.clearInput} className={filterClass}>{product.product_name}</Link>}
                        
                       </div>
                     );

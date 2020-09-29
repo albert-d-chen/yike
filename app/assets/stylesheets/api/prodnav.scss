@@ -179,9 +179,7 @@
     position: relative;
     justify-content: center;
     right: 25px;
-    padding: 10px;
-    // border-right: 1px solid black;
-    // border-left: 1px solid black;
+    padding: 5px;
 }
 
 .search-link{
@@ -190,6 +188,8 @@
     color: black;
     font-size: 12px;
     padding-bottom: 10px;
+    display: inline-block;
+    width: 180px;
     border-bottom: 1px solid lightgray;
 }
 
@@ -198,9 +198,25 @@
     font-family: 'Raleway', sans-serif;
     color: black;
     font-size: 12px;
+    display: inline-block;
+    width: 180px;
     padding-bottom: 10px;
 }
 
+.first-search-link{
+    text-decoration: none;
+    font-family: 'Raleway', sans-serif;
+    color: black;
+    font-size: 12px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    display: inline-block;
+    width: 180px;
+}
+
+.first-search-link:hover{
+    color: rgb(199, 199, 199); 
+}
 .search-link:visited{
     color: black;
 }

@@ -128,7 +128,7 @@ class CartItems extends React.Component {
                             </div>
                         </div>
                         
-                        <button className='delete-button' onClick={() => { window.location.reload(false); this.props.deleteCartItem(itemId); }}>Remove</button>
+                        <button className='delete-button' onClick={() => { this.props.deleteCartItem(itemId); }}>Remove</button>
                     </div>
                 </div>
         )})

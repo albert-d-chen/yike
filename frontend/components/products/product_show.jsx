@@ -37,7 +37,7 @@ class ProductShow extends React.Component{
             quantity: 1
         })
         this.props.history.push('/shoppingcart');
-        window.location.reload(false);
+        // window.location.reload(false);
     }
 
     addToCart(e) {
