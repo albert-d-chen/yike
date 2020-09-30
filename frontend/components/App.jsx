@@ -19,13 +19,15 @@ import WRunningIndexContainer from '../components/products/women_index/running_i
 import WCasualIndexContainer from '../components/products/women_index/casual_index/casual_index_container';
 
 import CartItemsContainer from '../components/cart_items/cart_items_index_container';
+import ReviewsIndexContainer from '../components/reviews/reviews_index_container';
+
 
 import Splash from './splash/home';
 
 
 // import KobeContainer from '../components/kobe/kobe_container'
 // import Kobe from './kobe/kobe';
-import SplashCarousel from './splash/splash';
+// import SplashCarousel from './splash/splash';
 
 
 const App = () => (
@@ -88,7 +90,8 @@ const App = () => (
         <Route exact path = '/womensrunning' component={WRunningIndexContainer} />
         <Route exact path = '/womenscasual' component={WCasualIndexContainer} />
 
-        <Route exact path ='/shoppingcart' component={CartItemsContainer}/>
+        <Route exact path = '/shoppingcart' component={CartItemsContainer}/>
+        <Route exact path = '/reviews' component={ReviewsIndexContainer}/>
         
     </div>
 );

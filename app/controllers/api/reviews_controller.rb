@@ -4,7 +4,7 @@ class Api::ReviewsController < ApplicationController
             @user = current_user
             @reviews = current_user.reviews
         else
-            @reviews = []
+            render json: ['Sign in to see your reviews'], status:404
         end
 
         render :index

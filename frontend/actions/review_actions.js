@@ -22,19 +22,19 @@ export const receiveReviewErrors = errors => ({
 export const fetchReviews = () => dispatch => (
     ReviewAPITUTIL.fetchReviews()
         .then(reviews => dispatch(receiveReviews(reviews)),
-        err => dispatch(receiveReviewErrors(err.response.JSON)))
+        err => dispatch(receiveReviewErrors(err.responseJSON)))
 )
 
 export const createReview = review => dispatch => (
     ReviewAPITUTIL.createReview(review)
         .then(product => dispatch(receiveReviews(product.reviews)),
-        err => dispatch(receiveReviewErrors(err.response.JSON)))
+        err => dispatch(receiveReviewErrors(err.responseJSON)))
 )
 
 export const updateReview = review => dispatch => (
     ReviewAPITUTIL.updateReview(review)
         .then(reviews => dispatch(receiveReviews(reviews)),
-        err => dispatch(receiveReviewErrors(err.response.JSON)))
+        err => dispatch(receiveReviewErrors(err.responseJSON)))
 )
 
 export const deleteReview = reviewId => dispatch => (
