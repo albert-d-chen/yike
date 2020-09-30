@@ -2,6 +2,7 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 import PopupAdded from './product_added_popup';
 import CreateReviewForm from '../reviews/create_review_container'
+import ProductReviewIndex from '../reviews/product_review_index'
 
 class ProductShow extends React.Component{
 
@@ -131,6 +132,9 @@ class ProductShow extends React.Component{
                             
                             <div className='create-form-container'>
                                 <CreateReviewForm product={product}/>
+                            </div>
+                            <div>
+                                <ProductReviewIndex product={product} reviews={this.props.reviews} currentUserId={this.props.currentUserId}/>
                             </div>
                         </div>
                     </div>
