@@ -11,7 +11,7 @@ const mapSTP = (state, ownProps) => ({
         product_id: ownProps.product.id,
         title: 'Title',
         body: 'Describe your experience!',
-        rating: 5
+        rating: 0
     }
 })
 
