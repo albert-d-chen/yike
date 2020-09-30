@@ -7,8 +7,8 @@ const reviewsReducer = (state ={}, action) => {
         case RECEIVE_REVIEWS:
             return Object.assign({}, state, action.reviews);
         case RECEIVE_PRODUCT:
-            if (action.reviews.reviews) {
-                return action.reviews.reviews;
+            if (action.product.reviews) {
+                return action.product.reviews;
             } else {
                 return {};
             }
