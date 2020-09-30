@@ -1,6 +1,7 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 import PopupAdded from './product_added_popup';
+import CreateReviewForm from '../reviews/create_review_container'
 
 class ProductShow extends React.Component{
 
@@ -127,7 +128,10 @@ class ProductShow extends React.Component{
                             <div className='add-item-container'>
                                    <button className='add-to-cart' onClick={this.addToCart}>Add To Cart</button>
                             </div>
-                     
+                            
+                            <div className='create-form-container'>
+                                <CreateReviewForm product={product}/>
+                            </div>
                         </div>
                     </div>
                 </div>

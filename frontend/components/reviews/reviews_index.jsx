@@ -1,6 +1,7 @@
 import React from 'react';
 
 
+
 class ReviewIndex extends React.Component{
     componentDidMount() {
         this.props.fetchReviews()
@@ -16,6 +17,7 @@ class ReviewIndex extends React.Component{
                         <div>
                             <div>{review.title}</div>
                             <div>{review.body}</div>
+                            <div>{review.rating}</div>
                         </div>
                     )
                 })}
