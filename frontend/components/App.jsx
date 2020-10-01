@@ -20,6 +20,7 @@ import WCasualIndexContainer from '../components/products/women_index/casual_ind
 
 import CartItemsContainer from '../components/cart_items/cart_items_index_container';
 import ReviewsIndexContainer from '../components/reviews/reviews_index_container';
+import EditReviewContainer from '../components/reviews/edit_review_container';
 
 
 import Splash from './splash/home';
@@ -92,6 +93,7 @@ const App = () => (
 
         <Route exact path = '/shoppingcart' component={CartItemsContainer}/>
         <Route exact path = '/reviews' component={ReviewsIndexContainer}/>
+        <Route exact path = '/reviews/:id' component={EditReviewContainer} />
         
     </div>
 );

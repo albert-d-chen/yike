@@ -80,7 +80,9 @@ class CreateReview extends React.Component {
                         </span>
 
                         <div>
-                            <button type='submit' onClick={() => {this.props.closePopup; window.location.reload(false);}}>Submit Review</button>
+                            <div className='checkout'>
+                                <button type='submit' onClick={() => {this.props.closePopup; window.location.reload(false);}}>Submit Review</button>
+                            </div>
                             <Link to={`/products/${this.state.product_id}`}><div className='login-close' type='submit' onClick={() => {this.props.closePopup; window.location.reload(false);}}></div></Link>
                         </div>
                     </form>

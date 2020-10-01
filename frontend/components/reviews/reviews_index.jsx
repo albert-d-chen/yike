@@ -1,5 +1,5 @@
 import React from 'react';
-
+import {Link} from 'react-router-dom'
 
 
 class ReviewIndex extends React.Component{
@@ -18,6 +18,7 @@ class ReviewIndex extends React.Component{
                             <div>{review.title}</div>
                             <div>{review.body}</div>
                             <div>{review.rating}</div>
+                            <Link to={`/reviews/${review.id}`}>Edit</Link>
                         </div>
                     )
                 })}
