@@ -64,3 +64,48 @@
   color: gold;
   text-shadow: 0 0 1px #333;
 }
+
+
+//your reviews
+
+.your-reviews-container {
+    top: 100px;
+    position: relative;
+    
+}
+
+.your-reviews-image {
+    height: 250px;
+    width: 250px;
+    display: inline-block;
+    position: relative;
+}
+
+.your-reviews-header {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    left: -15px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.your-reviews-info {
+    display: inline-block;
+    position: relative;
+    left: 5%;
+    top: -160px;
+}
+
+.your-reviews-element{
+    width: 650px;
+    height: 250px;
+    position: relative;
+    left: 25%;
+    border-top: 1px solid lightgray;
+    padding: 10px;
+}
+
+.your-reviews-product{
+    font-family: 'Pathway Gothic One', sans-serif;
+    font-size: 20px;
+}
