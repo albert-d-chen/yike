@@ -42,11 +42,16 @@ class EditReview extends React.Component{
 
 
     render() {
+        
+        if (Object.values(this.props.products).length === 0) return null;
+
+
         return(
             <div style={{top: '100px', position:'relative'}}>
-
+                <h1>Edit Review</h1>
+                <img src={this.props.products[this.state.product_id].photoUrls[0]}/>
                 <form>
-                    <h1>Edit Review</h1>
+
                         <label>
                             <input type="text" value={this.state.title} onChange={this.update('title')}/>
                         </label>

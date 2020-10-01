@@ -182,8 +182,60 @@ body{
 
 .logout-link:hover{
     color: rgba(130, 130, 130, 0.8);
+
 }
 
-// .join-or-login{
-//     right: 5px;
-// }
+.review-link:hover{
+    color: rgba(130, 130, 130, 0.8);
+
+}
+
+.review-link{
+     text-decoration: none;
+    color: black;
+    font-family: 'Pathway Gothic One', sans-serif;
+    letter-spacing: 1px;
+}
+
+.review-link:after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 12px;
+  width: 0;
+  bottom: 45px;
+  background: rgba(130, 130, 130, 0.8);
+  height: 1px;
+//   transition-property: width;
+  transition-duration: 0.4s;
+  transition-timing-function: ease-out;
+}
+.review-link:hover:after,
+.review-link:focus:after,
+.review-link:active:after {
+  left: 12px;
+  right: auto;
+  width: 50%;
+}
+
+.logout-link:after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 12px;
+  width: 0;
+  bottom: 12px;
+  background: rgba(130, 130, 130, 0.8);
+  height: 1px;
+//   transition-property: width;
+  transition-duration: 0.4s;
+  transition-timing-function: ease-out;
+}
+.logout-link:hover:after,
+.logout-link:focus:after,
+.logout-link:active:after {
+  left: 12px;
+  right: auto;
+  width: 25%;
+}
+
