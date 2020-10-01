@@ -3,8 +3,8 @@ import EditReview from "./edit_review";
 
 class PreEditReview extends React.Component {
     componentDidMount() {
-        this.props.fetchReviews();
-        this.props.getProducts();
+        this.props.fetchReviews()
+            // .then(() => this.props.getProducts())
     }
 
     render() {

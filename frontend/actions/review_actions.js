@@ -33,8 +33,8 @@ export const createReview = review => dispatch => (
 
 export const updateReview = review => dispatch => (
     ReviewAPITUTIL.updateReview(review)
-        .then(reviews => dispatch(receiveReviews(reviews)),
-        err => dispatch(receiveReviewErrors(err.responseJSON)))
+        // .then(reviews => dispatch(receiveReviews(reviews)),
+        // err => dispatch(receiveReviewErrors(err.responseJSON)))
 )
 
 export const deleteReview = reviewId => dispatch => (
