@@ -13,7 +13,7 @@ const ProductReviewIndex = ({reviews, currentUserId}) => {
     if (ratingsLength > 0) {
         averageRating = Number.parseFloat(total / ratingsLength).toFixed(1);
     } else {
-        averageRating = null;
+        averageRating = 0;
     }
     return (
         <div>
