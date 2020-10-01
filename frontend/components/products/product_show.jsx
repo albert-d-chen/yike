@@ -9,9 +9,19 @@ class ProductShow extends React.Component{
     constructor(props){
         super(props);
 
+        this.state = {
+            showPopupReview: false
+        }
+
         this.handleSize = this.handleSize.bind(this);
         this.addToCart = this.addToCart.bind(this);
         this.addItem = this.addItem.bind(this);
+    }
+
+    togglePopUpReview() {
+        this.setState({
+            showPopupReview: !this.state.showPopupReview
+        })
     }
 
     componentDidMount(){
@@ -24,7 +34,6 @@ class ProductShow extends React.Component{
             this.props.getProduct(this.props.match.params.productId);
         }
     }
-
 
     handleSize(idx) {
         event.preventDefault();
@@ -131,7 +140,10 @@ class ProductShow extends React.Component{
                             </div>
                             
                             <div className='create-form-container'>
-                                <CreateReviewForm product={product}/>
+                                 <div className='checkout'><button onClick={() => {this.togglePopUpReview();}} className='checkoutButton'>Create Review</button></div>
+                                 {this.state.showPopupReview ? 
+                                    <CreateReviewForm product={product} showPopupReview={this.state.showPopupReview} closePopup={this.togglePopUpReview}/> : null}
+                                {/* <CreateReviewForm product={product}/> */}
                             </div>
                             <div>
                                 <ProductReviewIndex product={product} reviews={this.props.reviews} currentUserId={this.props.currentUserId}/>

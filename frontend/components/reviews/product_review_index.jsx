@@ -1,5 +1,6 @@
 import React from 'react';
 import ProductReviewItem from './product_review_item'
+import StarRatings from 'react-star-ratings';
 
 const ProductReviewIndex = ({reviews, currentUserId}) => {
     const reviewsSort = reviews.reverse();
@@ -16,7 +17,21 @@ const ProductReviewIndex = ({reviews, currentUserId}) => {
     }
     return (
         <div>
-            <h1>{averageRating} Reviews ({ratingsLength})</h1>
+            <h1>Reviews ({ratingsLength})
+                    <StarRatings 
+                        rating={parseFloat(averageRating)}
+                        ignoreInlineStyles={false}
+                        starDimension='20px'
+                        starRatedColor='gold'
+                        numberOfStars={5}
+                        name='rating'
+                        starSpacing='1px'
+                    />
+
+            </h1>
+            <div>
+                
+            </div>
             <h2></h2>
             {reviewsSort.map(review => (
                 <ProductReviewItem key={review.id} review={review} currentUserId={currentUserId}/>
