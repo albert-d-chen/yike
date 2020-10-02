@@ -192,3 +192,109 @@
     position: relative;
     left: 200px;;
 }
+
+//editreview form
+
+.edit-review-container{
+    top: 100px;
+    position: relative;
+}
+
+.edit-review-header{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    // left: -15px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.edit-review-image{
+    height: 250px;
+    width: 250px;
+    display: inline-block;
+    position: relative;
+
+}
+
+.edit-review-element{
+    width: 650px;
+    height: 250px;
+    position: relative;
+    left: 25%;
+    border-top: 1px solid lightgray;
+    border-bottom: 1px solid lightgray;
+    padding: 20px;
+}
+
+.edit-review-info{
+    position: relative;
+    display: inline-block;
+    top: -0px;
+    left: 5%;
+}
+
+.edit-review-product{
+    font-family: 'Baloo Tamma 2', cursive;
+    font-size: 17px;
+    position: relative;
+    top: -260px;
+    left: 250px;
+    color: rgba(130, 130, 130, .8);
+}
+
+.edit-review-title{
+    position: relative;
+    top: -330px;
+    left: 250px;
+    padding: 10px;
+    font-family: 'Roboto', sans-serif;
+    width: 170px;
+    font-size: 15px;
+}
+.edit-review-body{
+    resize: none;
+    position: relative;
+    top: -200px;
+    width: 300px;
+    height: 80px;
+    left: 55px;
+    padding: 10px;
+    overflow: auto;
+    
+}
+
+.edit-review-body:focus{
+    outline: none;
+}
+
+.edit-review-title{
+    outline: none;
+}
+
+
+.edit-review-rate {
+    position: relative;
+    top: -200px;
+    left: 250px;
+    font-family: 'Pathway Gothic One', sans-serif;
+}
+
+.edit-review-button{
+    position: relative;
+    top: -210px;
+    left: 380px;
+    cursor: pointer;
+    padding-right: 10px;
+    padding-left: 10px;
+    background-color: rgb(129, 255, 129);
+}
+
+.edit-review-button:hover{
+    background-color: rgb(23, 212, 23);
+}
+
+.star-cb-group{
+    position: relative;
+    top: -220px;
+    left: 360px;
+}

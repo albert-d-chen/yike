@@ -47,43 +47,47 @@ class EditReview extends React.Component{
 
 
         return(
-            <div style={{top: '100px', position:'relative'}}>
-                <h1 className='edit-review-header'>Edit Review</h1>
-                <img className='edit-review-image' src={this.props.products[this.state.product_id].photoUrls[0]}/>
-                <form>
+            <div className='edit-review-container'>
+                <h1 className='edit-review-header'>Edit Your Review</h1>
+                <form className='edit-review-element'>
 
-                        <label>
-                            <input type="text" value={this.state.title} onChange={this.update('title')}/>
-                        </label>
+                        <img className='edit-review-image' src={this.props.products[this.state.product_id].photoUrls[0]}/>
+                        <div className='edit-review-info'>
+                            <div className='edit-review-product'>{this.props.products[this.state.product_id].product_name}</div>
+                            <label>
+                                <input className='edit-review-title'type="text" value={this.state.title} onChange={this.update('title')}/>
+                            </label>
+                            
+                            <label>
+                                <textarea className='edit-review-body' value={this.state.body} onChange={this.update('body')}/>
+                            </label>
+                            <div className='edit-review-rate'>Rate your experience!</div>
+                            <span className='star-cb-group'>
+                                <input id='rating-5' type="radio" value='5' name='rating' checked={(this.state.rating === 5)} onChange={this.updateRating('rating')}/>
+                                <label htmlFor='rating-5'>5
+                                </label>
+                                <input id='rating-4' type="radio" value='4' name='rating' checked={(this.state.rating === 4)}onChange={this.updateRating('rating')}/>
+                                <label htmlFor='rating-4'>4
+                                </label>
+                                    <input id='rating-3' type="radio" value='3' name='rating' checked={(this.state.rating === 3)} onChange={this.updateRating('rating')}/>
+                                <label htmlFor='rating-3'>3
+                                </label>
+                                    <input id='rating-2' type="radio" value='2' name='rating' checked={(this.state.rating === 2)} onChange={this.updateRating('rating')}/>
+                                <label htmlFor='rating-2'>2
+                                </label>
+                                    <input id='rating-1' type="radio" value='1' name='rating' checked={(this.state.rating === 1)} onChange={this.updateRating('rating')}/>
+                                <label htmlFor='rating-1'>1
+                                </label>
+                                    <input id='rating-0' type="radio" value='0' name='rating' checked={(this.state.rating === 0)} onChange={this.updateRating('rating')} className='star-cb-clear'/>
+                                <label htmlFor='rating=-'>0
+                                </label>
+                            </span>
 
-                        <label>
-                            <textarea value={this.state.body} onChange={this.update('body')}/>
-                        </label>
-                        <div>Rate your experience!</div>
-                         <span className='star-cb-group'>
-                            <input id='rating-5' type="radio" value='5' name='rating' checked={(this.state.rating === 5)} onChange={this.updateRating('rating')}/>
-                            <label htmlFor='rating-5'>5
-                            </label>
-                            <input id='rating-4' type="radio" value='4' name='rating' checked={(this.state.rating === 4)}onChange={this.updateRating('rating')}/>
-                            <label htmlFor='rating-4'>4
-                            </label>
-                                <input id='rating-3' type="radio" value='3' name='rating' checked={(this.state.rating === 3)} onChange={this.updateRating('rating')}/>
-                            <label htmlFor='rating-3'>3
-                            </label>
-                                <input id='rating-2' type="radio" value='2' name='rating' checked={(this.state.rating === 2)} onChange={this.updateRating('rating')}/>
-                            <label htmlFor='rating-2'>2
-                            </label>
-                                <input id='rating-1' type="radio" value='1' name='rating' checked={(this.state.rating === 1)} onChange={this.updateRating('rating')}/>
-                            <label htmlFor='rating-1'>1
-                            </label>
-                                <input id='rating-0' type="radio" value='0' name='rating' checked={(this.state.rating === 0)} onChange={this.updateRating('rating')} className='star-cb-clear'/>
-                            <label htmlFor='rating=-'>0
-                            </label>
-                        </span>
+                            <div>
+                                <button className='edit-review-button' type='submit' onClick={this.handleSubmit}>Save</button>
+                                {/* <button onClick={this.reviewDelete}>Delete</button> */}
+                            </div>
 
-                        <div>
-                            <button type='submit' onClick={this.handleSubmit}>Save Edits.</button>
-                            {/* <button onClick={this.reviewDelete}>Delete</button> */}
                         </div>
                 </form>
             </div>
