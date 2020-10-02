@@ -106,6 +106,89 @@
 }
 
 .your-reviews-product{
+    font-family: 'Baloo Tamma 2', cursive;
+    font-size: 17px;
+    position: relative;
+    top: 10px;
+    color: rgba(130, 130, 130, .8);
+}
+
+.your-reviews-title{
+    font-family: 'Roboto', sans-serif;
+    position: relative;
+    font-weight: 500;
+    letter-spacing: 1px;
+    font-size: 25px;
+    top: 15px;
+}
+
+.your-reviews-body{
+    position: absolute;
+    top: 80px;
+    height: 80px;
+    width: 300px;
+    padding: 10px;
+    border: 1px solid lightgrey;
+    border-radius: 10px;
     font-family: 'Pathway Gothic One', sans-serif;
-    font-size: 20px;
+    overflow: auto;
+    letter-spacing: 1px;
+
+}
+
+.your-reviews-rating{
+    position: relative;
+    top: 140px;
+    font-family: 'Baloo Tamma 2', cursive;
+}
+
+.your-reviews-edit {
+    position: relative;
+    top: 150px;
+}
+
+.your-reviews-delete{
+    position: relative;
+    top: 150px;
+}
+
+.your-reviews-star{
+    display: inline-block;
+    position: relative;
+    top: 3px;
+}
+
+.your-reviews-link{
+    text-decoration: none;
+    color: white;
+
+}
+
+.your-reviews-edit{
+    background-color: rgb(141, 209, 231);
+    outline: none;
+    cursor: pointer;
+    color: white;
+}
+
+.your-reviews-delete{
+    background-color: rgb(252, 102, 102);
+    outline: none;
+    cursor: pointer;
+    color: white;
+}
+
+.your-reviews-edit:hover{
+    background-color: rgb(7, 175, 231);
+}
+
+.your-reviews-delete:hover{
+    background-color: rgb(248, 45, 45);
+}
+
+.your-reviews-date{
+    display: inline-block;
+    font-size: 10px;
+    position: relative;
+    left: 200px;;
 }

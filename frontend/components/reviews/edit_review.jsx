@@ -48,8 +48,8 @@ class EditReview extends React.Component{
 
         return(
             <div style={{top: '100px', position:'relative'}}>
-                <h1>Edit Review</h1>
-                <img src={this.props.products[this.state.product_id].photoUrls[0]}/>
+                <h1 className='edit-review-header'>Edit Review</h1>
+                <img className='edit-review-image' src={this.props.products[this.state.product_id].photoUrls[0]}/>
                 <form>
 
                         <label>
