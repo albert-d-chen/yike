@@ -295,6 +295,107 @@
 
 .star-cb-group{
     position: relative;
-    top: -220px;
-    left: 360px;
+    top: 50px;
+    left: 260px;
+}
+
+
+//create review
+.create-review-form{
+    position:relative;
+}
+.create-review-header {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+.create-review-title{
+    position: relative;
+    left: 190px;
+    top: -80px;
+    padding: 10px;
+    font-family: 'Roboto', sans-serif;
+    width: 200px;
+    font-size: 15px;
+}
+
+.create-review-body{
+    position: relative;
+    resize: none;
+    width: 300px;
+    height: 80px;
+    left: -85px;
+    top: 50px;
+    padding: 10px;
+    overflow: auto;
+}
+
+.create-review-rate{
+    position: relative;
+    top: 50px;
+    left: 245px;
+    font-family: 'Pathway Gothic One', sans-serif;
+}
+.review-button-div{
+    display: flex;
+    justify-content: center;
+    position:relative;
+    top: 70px;
+}
+
+.create-review-button{
+
+}
+
+.review-close {
+    position: absolute;
+    right: 32px;
+    top: -10px;
+    width: 12px;
+    height: 12px;
+    opacity: 0.2;
+}
+.review-close:hover {
+    opacity: 1;
+}
+.review-close:before, .review-close:after {
+    position: absolute;
+    left: 15px;
+    content: '';
+    height: 33px;
+    width: 2px;
+    background-color: #333;
+}
+.review-close:before {
+    transform: rotate(45deg);
+}
+.review-close:after {
+    transform: rotate(-45deg);
+}
+
+
+.create-review-button{
+    visibility: visible;
+    border:none;
+    border-radius: 50px;
+    background-color: black;
+    color: white;
+    padding: 10px;
+    width: 200px;
+    cursor: pointer;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 15px;
+    letter-spacing: 1px;
+
+}
+
+.create-review-button:focus{
+    outline:0;
+}
+
+.create-review-button:hover{
+    background-color: lightgray;
 }
