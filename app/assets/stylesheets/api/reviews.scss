@@ -4,11 +4,13 @@
 
 
 .create-form-container{
-    padding-top: 70px;
+    padding-top: 10px;
+    padding-bottom: 40px;
     display: flex;
     position: relative;
     justify-content: center;
     left: 8px;
+    font-family: 'Baloo Tamma 2', cursive;
 }
 
 
@@ -398,4 +400,40 @@
 
 .create-review-button:hover{
     background-color: lightgray;
+}
+
+.create-button {
+    border: none;
+    outline: none;
+    background-color: white;
+    cursor: pointer;
+    text-decoration: underline;
+    text-decoration-style: dotted;
+    font-family: 'Baloo Tamma 2', cursive;
+    font-size: 15px;
+    color: darkgrey;
+}
+.create-button:hover{
+    color: lightskyblue;
+}
+
+//ratings index
+
+.review-index-ratings {
+    position: relative;
+    display: flex;
+    left : 70px;
+    top: 0px;
+}
+
+.review-index-header{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    font-size: 30px;
+    border-bottom: 1px solid lightgray;
+    padding-bottom: 10px;
+    width: 110%;
+    position: relative;
+    display: flex;
+    align-items: center;
 }

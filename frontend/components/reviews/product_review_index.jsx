@@ -17,18 +17,20 @@ const ProductReviewIndex = ({reviews, currentUserId}) => {
     }
     return (
         <div>
-            <h1>Reviews ({ratingsLength})
-                    <StarRatings 
-                        rating={parseFloat(averageRating)}
-                        ignoreInlineStyles={false}
-                        starDimension='20px'
-                        starRatedColor='gold'
-                        numberOfStars={5}
-                        name='rating'
-                        starSpacing='1px'
-                    />
+            <div className='review-index-header'>Reviews ({ratingsLength})
+                    <div className='review-index-ratings'>
+                        <StarRatings 
+                            rating={parseFloat(averageRating)}
+                            ignoreInlineStyles={false}
+                            starDimension='20px'
+                            starRatedColor='gold'
+                            numberOfStars={5}
+                            name='rating'
+                            starSpacing='1px'
+                        />
+                    </div>
 
-            </h1>
+            </div>
             <div>
                 
             </div>

@@ -140,13 +140,15 @@ class ProductShow extends React.Component{
                             </div>
                             
                             <div className='create-form-container'>
-                                 <div className='checkout'><button onClick={() => {this.togglePopUpReview();}} className='checkoutButton'>Create Review</button></div>
+                                Already Purchased? 
+                                 <div className='checkout'><button onClick={() => {this.togglePopUpReview();}} className='create-button'><div className='create-in'>Write a Review</div></button></div>
                                  {this.state.showPopupReview ? 
                                     <CreateReviewForm product={product} showPopupReview={this.state.showPopupReview} closePopup={this.togglePopUpReview}/> : null}
                                 {/* <CreateReviewForm product={product}/> */}
                             </div>
                             <div>
                                 <ProductReviewIndex product={product} reviews={this.props.reviews} currentUserId={this.props.currentUserId}/>
+                            
                             </div>
                         </div>
                     </div>
