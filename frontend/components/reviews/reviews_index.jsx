@@ -56,6 +56,18 @@ class ReviewIndex extends React.Component{
                         </div>
                     )
                 })}
+
+                <div className='footer-main-review'>
+                        <div className='kobe'>
+                            In memory of Kobe Bryant.
+                        </div>
+                        <div className='social-icons'>
+                            
+                            <a href="https://github.com/albert-d-chen" target={"_blank"}><i className="fab fa-github fa-2x footer-icon" style={{color: 'white'}}></i></a>
+                            <a href="https://linkedin.com/in/albertdchen" target={"_blank"}><i className="fab fa-linkedin fa-2x footer-icon" style={{ color: 'white' }}></i></a>
+                            
+                        </div>
+                </div>
             </div>
         )
     }
