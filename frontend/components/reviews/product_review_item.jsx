@@ -3,8 +3,8 @@ import StarRatings from 'react-star-ratings';
 import moment from 'moment'
 
 const ProductReviewItem = ({review, currentUser}) => {
-    if (!review.rating) {
-      review.rating = 0;
+    if (review.last_name === undefined) {
+      return null;
     }
     return (
       <div className='review-index-container'>

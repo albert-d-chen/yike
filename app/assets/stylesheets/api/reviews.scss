@@ -111,7 +111,7 @@
     font-family: 'Baloo Tamma 2', cursive;
     font-size: 17px;
     position: relative;
-    top: 10px;
+    top: 30px;
     color: rgba(130, 130, 130, .8);
 }
 
@@ -126,7 +126,7 @@
 
 .your-reviews-body{
     position: absolute;
-    top: 80px;
+    top: 100px;
     height: 80px;
     width: 300px;
     padding: 10px;
@@ -189,10 +189,12 @@
 }
 
 .your-reviews-date{
-    display: inline-block;
     font-size: 10px;
     position: relative;
-    left: 200px;;
+    left: 300px;
+    top: 10px;
+    font-family: 'Baloo Tamma 2', cursive;
+    color: rgba(130, 130, 130, .8);
 }
 
 //editreview form

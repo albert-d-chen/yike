@@ -31,10 +31,7 @@ const ProductReviewIndex = ({reviews, currentUserId}) => {
                     </div>
 
             </div>
-            <div>
-                
-            </div>
-            <h2></h2>
+        
             {reviewsSort.map(review => (
                 <ProductReviewItem key={review.id} review={review} currentUserId={currentUserId}/>
             ))}
