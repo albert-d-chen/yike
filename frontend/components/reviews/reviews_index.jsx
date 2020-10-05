@@ -17,12 +17,13 @@ class ReviewIndex extends React.Component{
     render() {
         const {reviews} = this.props;
         // debugger
+        let filteredReviews = reviews.filter((review) => this.props.currentUserID === review.user_id)
         if (Object.values(this.props.products).length === 0) return null;
      
         return(
             <div className='your-reviews-container'>
                 <h1 className='your-reviews-header'>Your Reviews</h1>
-                {reviews.map( review => {
+                {filteredReviews.map( review => {
                     return (
                         <div key={review.id} className='your-reviews-element'>
 
